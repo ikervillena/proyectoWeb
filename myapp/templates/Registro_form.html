@@ -1,16 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="es"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Inicia sesión">
+    <meta name="keywords" content="Registrarse">
     <meta name="description" content="">
-    <title>Inicio sesión</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Inicio-sesión.css" media="screen">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'css/Registrarse.css' %}" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.21.5, nicepage.com">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-theme-google-font" rel="stylesheet" href="{% static 'css/Registrarse.css' %}">
     
     
     <script type="application/ld+json">{
@@ -28,14 +29,14 @@
     <meta name="theme-color" content="#478ac9">
     <meta name="twitter:site" content="@">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Inicio sesión">
+    <meta name="twitter:title" content="Registrarse">
     <meta name="twitter:description" content="">
-    <meta property="og:title" content="Inicio sesión">
+    <meta property="og:title" content="Registrarse">
     <meta property="og:type" content="website">
   </head>
   <body class="u-body u-xl-mode" data-lang="es"><header class="u-clearfix u-grey-80 u-header u-header" id="sec-96f6"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="409" data-image-height="221">
-          <img src="images/IMConsultoraTecnolgica11.png" class="u-logo-image u-logo-image-1">
+          <img src="{% static 'images/IMConsultoraTecnolgica11.png' %}" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -73,41 +74,16 @@
           </div>
         </nav>
       </div></header>
-    <section class="u-align-center u-clearfix u-grey-5 u-section-1" id="sec-9a03">
+    <section class="u-clearfix u-grey-15 u-section-1" id="sec-7702">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-text u-text-default u-text-1">Inicia sesión</h1>
-        <div class="u-align-center u-border-11 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-light-3 u-container-style u-custom-border u-expanded-width-xs u-grey-15 u-group u-shape-rectangle u-group-1">
-          <div class="u-container-layout u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xl u-container-layout-1">
-            <div class="u-form u-login-control u-form-1">
-              <form action="#" class="u-clearfix u-form-custom-backend u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 0px;">
-                {{ form }}
-                <input type="submit" value="submit" class="u-form-control-hidden">
-                <!-- <div class="u-form-group u-form-name u-label-top">
-                  <label for="username-a30d" class="u-label u-label-1">Username *</label>
-                  <input type="text" placeholder="Usuario" id="username-a30d" name="username" class="u-border-8 u-border-white u-input u-input-rectangle u-radius-50 u-white u-input-1" required="">
-                </div>
-                <div class="u-form-group u-form-password u-label-top">
-                  <label for="password-a30d" class="u-label u-label-2">Password *</label>
-                  <input type="text" placeholder="Contraseña" id="password-a30d" name="password" class="u-border-8 u-border-white u-input u-input-rectangle u-radius-50 u-white u-input-2" required="">
-                </div>
-                <div class="u-form-checkbox u-form-group u-label-top">
-                  <input type="checkbox" id="checkbox-a30d" name="remember" value="On">
-                  <label for="checkbox-a30d" class="u-label u-label-3">Recuerdame</label>
-                </div>
-                <div class="u-align-left u-form-group u-form-submit u-label-top">
-                  <input type="submit" value="submit" class="u-form-control-hidden">
-                  <a href="Inicio.html" class="u-active-palette-5-light-3 u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-5-dark-1 u-palette-5-light-1 u-radius-50 u-text-active-palette-5-dark-2 u-text-hover-palette-5-light-3 u-btn-1">Entrar<br>
-                  </a>
-                </div>
-                <input type="hidden" value="" name="recaptchaResponse"> -->
-              </form>
-            </div>
-            <div class="u-align-center-xs u-container-style u-expanded-width u-group u-white u-group-2">
-              <div class="u-container-layout u-container-layout-2">
-                <a href="Registrarse.html" class="u-border-1 u-border-active-palette-2-light-2 u-border-hover-palette-2-light-2 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-login-control u-login-create-account u-none u-text-active-palette-5-light-1 u-text-body-color u-text-hover-palette-5-light-1 u-btn-2">¿No tienes cuenta? Regístrate</a>
-              </div>
-            </div>
-          </div>
+        <h1 class="u-text u-text-default u-text-1">Registrarse<br>
+        </h1>
+        <div class="u-form u-form-1">
+          <form action="{% url 'registro_form' %}" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px;">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Registrarse"/>
+          </form>
         </div>
       </div>
     </section>
@@ -163,14 +139,14 @@
         </div>
       </div></footer>
     <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-design" target="_blank">
-        <span>Website Design Ideas</span>
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Templates</span>
       </a>
       <p class="u-text">
         <span>created with</span>
       </p>
-      <a class="u-link" href="https://nicepage.com/html-website-builder" target="_blank">
-        <span>HTML Website Builder</span>
+      <a class="u-link" href="" target="_blank">
+        <span>Website Builder Software</span>
       </a>. 
     </section>
   
