@@ -44,3 +44,9 @@ def lista_telefonos(request):
     context = { 'lista_telefonos' : telefonos}
     return render (request, 'TipoProducto.html', context)
 
+def tipo_producto(request):
+    ordenadores = Ordenador.objects.order_by('precio')
+    audios = Audio.objects.order_by('precio')
+    telefonos = Telefono.objects.order_by('precio')
+    context = {'lista_ordenadores' : ordenadores, 'lista_audios' : audios, 'lista_telefonos' : telefonos}
+    return render (request, 'tipoProducto.html', context)
