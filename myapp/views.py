@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from .forms import ClienteForm
 from django.http import HttpResponse
 from .models import Producto, Ordenador, Audio, Telefono, Cliente
@@ -59,3 +59,23 @@ def tipo_producto(request):
     telefonos = Telefono.objects.order_by('precio')
     context = {'lista_ordenadores' : ordenadores, 'lista_audios' : audios, 'lista_telefonos' : telefonos}
     return render (request, 'tipoProducto.html', context)
+
+def detalle(request, producto_id):
+    producto = get_object_or_404(Producto, pk=producto_id)
+    context = {'producto': producto}
+    return render(request, 'VistaDetalle.html', context)
+
+#def detalle_telefono(request, telefono_id):
+    #telefono = get_object_or_404(Telefono,pk=telefono_id)
+    #context = {'telefono': telefono}
+    #return render(request, 'VistaDetalle.html', context)
+
+#def detalle_ordenador(request, ordenador_id):
+    #ordenador = get_object_or_404(Ordenador,pk=ordenador_id)
+    #context = {'ordenador': ordenador}
+    #return render(request, 'VistaDetalle.html', context)
+
+#def detalle_audio(request, audio_id):
+    #audio = get_object_or_404(Telefono,pk=audio_id)
+    #context = {'audio': audio}
+    #return render(request, 'VistaDetalle.html', context)

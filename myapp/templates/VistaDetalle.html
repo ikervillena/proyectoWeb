@@ -1,3 +1,4 @@
+{% load static%}
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="es"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -5,8 +6,8 @@
     <meta name="keywords" content="Título del Producto 1">
     <meta name="description" content="">
     <title>VistaDetalle</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="VistaDetalle.css" media="screen">
+    <link rel="stylesheet" href="{% static 'css/nicepage.css'%}" media="screen">
+<link rel="stylesheet" href="{%static 'css/VistaDetalle.css'%}" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.21.5, nicepage.com">
@@ -35,7 +36,7 @@
   </head>
   <body class="u-body u-xl-mode" data-lang="es"><header class="u-clearfix u-grey-80 u-header u-header" id="sec-96f6"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="409" data-image-height="221">
-          <img src="images/IMConsultoraTecnolgica11.png" class="u-logo-image u-logo-image-1">
+          <img src="{% static 'images/IMConsultoraTecnolgica11.png'%}" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -81,7 +82,7 @@
               <div class="u-carousel-inner u-gallery-inner" role="listbox"><!--product_gallery_item-->
                 <div class="u-active u-carousel-item u-gallery-item">
                   <div class="u-back-slide">
-                    <img class="u-back-image u-expanded" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0ibWFuIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjI1NnB4IiBoZWlnaHQ9IjI1NnB4IiB2aWV3Qm94PSIwIDAgMjU2IDI1NiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjU2IDI1NiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cmVjdCBmaWxsPSIjQzZEOEUxIiB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiM3Rjk2QTYiIGQ9Ik0xOTIuNyw1NGMwLDAsNS4zLDAuMywxMy4yLDkuMmM3LjksOC45LDE0LjMsMTksMTUuOCwyNS44DQoJYzEuNSw2LjgsMiwxMy42LDAuMywxNy41Yy0xLjgsMy45LTExLjQsMzQuNC0xMS43LDQzLjljLTAuMyw5LjUtMi42LDUzLTIuNiw1M2gtMTAuNWwtMi4xLTU3LjdjMCwwLTAuMy0xMC43LTMuOC0xMC43DQoJYy0zLjUsMC0xNi43LDQuNC0yOC45LDI3QzE1MCwxODQuNSwxNDMsMTk3LjUsMTM2LDIwMC44Yy03LDMuMy01Ny4zLDQuMi03MSwyLjFjLTEzLjctMi4xLTMxLjMtOS41LTMxLjMtOS41cy0zLjgtNy4xLDctMTAuMQ0KCWMxMC44LTMsNDEuOC0xMyw0OC4yLTE2LjljMy43LTIuMiwyOSw2LjksMzguOS01LjFjOS4xLTExLjEsMzcuMy03MSw0NS42LTgyLjlDMTgzLjQsNjQuMSwxOTAuOCw1NCwxOTIuNyw1NHoiLz4NCjwvc3ZnPg0K">
+                    <img class="u-back-image u-expanded" src="">
                   </div>
                   <div class="u-over-slide u-over-slide-1">
                     <h3 class="u-gallery-heading">Sample Title</h3>
@@ -132,18 +133,18 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
               </ol>
             </div><!--/product_gallery--><!--product_title-->
             <h2 class="u-align-left u-product-control u-text u-text-1">
-              <a class="u-product-title-link" href="#"><!--product_title_content-->Título del Producto 1<!--/product_title_content--></a>
+              <a class="u-product-title-link" href="#"><!--product_title_content--> {{producto.nombre}} <!--/product_title_content--></a>
             </h2><!--/product_title--><!--product_price-->
             <div class="u-product-control u-product-price u-product-price-1">
               <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
                 <div class="u-hide-price u-old-price" style="text-decoration: line-through !important;"><!--product_old_price_content-->$20.00<!--/product_old_price_content--></div><!--/product_old_price--><!--product_regular_price-->
-                <div class="u-price u-text-palette-2-base" style="font-size: 1.875rem; font-weight: 700;"><!--product_regular_price_content-->$17.00<!--/product_regular_price_content--></div><!--/product_regular_price-->
+                <div class="u-price u-text-palette-2-base" style="font-size: 1.875rem; font-weight: 700;"><!--product_regular_price_content--> {{producto.precio}}€ <!--/product_regular_price_content--></div><!--/product_regular_price-->
               </div>
             </div><!--/product_price--><!--product_content-->
             <div class="u-align-left u-product-control u-product-desc u-text u-text-2"><!--product_content_content-->
-              <p>Texto de muestra. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p><!--/product_content_content-->
+              <p><b>Descripción:</b> {{producto.descripcion}} </p><!--/product_content_content-->
             </div><!--/product_content--><!--product_button--><!--options_json--><!--{"clickType":"go-to-page","content":"Add to Cart"}--><!--/options_json-->
-            <a href="#" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-product-control u-text-black u-text-hover-white u-btn-1"><!--product_button_content-->Add to Cart<!--/product_button_content--></a><!--/product_button-->
+            <a href="#" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-product-control u-text-black u-text-hover-white u-btn-1"><!--product_button_content-->Añadir al carrito<!--/product_button_content--></a><!--/product_button-->
           </div>
         </div><!--/product_item--><!--/product-->
       </div>
@@ -168,7 +169,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
               </div>
               <div class="u-align-center-sm u-align-right-md u-container-style u-layout-cell u-size-1-md u-size-20-lg u-size-20-sm u-size-20-xl u-size-20-xs u-layout-cell-2">
                 <div class="u-container-layout u-valign-bottom-md u-container-layout-2">
-                  <img class="u-align-center-md u-align-center-sm u-align-center-xs u-image u-image-contain u-image-default u-image-1" src="images/IMConsultoraTecnolgica11.png" alt="" data-image-width="409" data-image-height="221">
+                  <img class="u-align-center-md u-align-center-sm u-align-center-xs u-image u-image-contain u-image-default u-image-1" src="{% static 'images/IMConsultoraTecnolgica11.png'%}" alt="" data-image-width="409" data-image-height="221">
                 </div>
               </div>
               <div class="u-align-center-sm u-align-center-xs u-align-left-md u-align-right-lg u-align-right-xl u-container-style u-layout-cell u-right-cell u-size-20-lg u-size-20-sm u-size-20-xl u-size-20-xs u-size-59-md u-layout-cell-3">
