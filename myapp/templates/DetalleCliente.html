@@ -78,12 +78,11 @@
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-text u-text-default u-text-1">Registrarse<br>
         </h1>
-        <div>
-          <form action="{% url 'post_registro_form' %}" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Registrarse"/>
-          </form>
+        <div class="u-form u-form-1">
+          <h2>Bienvenid@ {{cliente.nombre}}!</h2>
+          <h4>Nombre: {{cliente.nombre}}</h3>
+          <h4>Nombre de usuario: {{cliente.usuario}}</h3>
+          <h4>Email: {{cliente.email}}</h3>
         </div>
       </div>
     </section>
