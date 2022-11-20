@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import ClienteForm
-from .models import Producto, Ordenador, Audio, Telefono
+from django.http import HttpResponse
+from .models import Producto, Ordenador, Audio, Telefono, Cliente
 
 # Create your views here.
 
@@ -8,8 +9,16 @@ def show_registro_form(request):
     form = ClienteForm()
     return render(request, 'Registro_form.html', {'form': form})
 
-def registrar(request):
-    return render(request, 'Registrarse.html')
+def post_registro_form(request):
+    form = ClienteForm(request.POST)
+    if form.is_valid():
+        nombre_registro = form.cleaned_data['nombre']
+        usuario_registro = form.cleaned_data['usuario']
+        contrasenya_registro = form.cleaned_data['contrasenya']
+        email_registro = form.cleaned_data['email']
+        cliente = Cliente(nombre=nombre_registro, usuario=usuario_registro, contrasenya=contrasenya_registro, email=email_registro)
+        cliente.save()
+        return HttpResponse(f"{nombre_registro}, registro correcto!")
 
 # Devuelve los datos de un ordenador por ID
 def ordenador(request):

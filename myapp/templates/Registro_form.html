@@ -79,7 +79,7 @@
         <h1 class="u-text u-text-default u-text-1">Registrarse<br>
         </h1>
         <div class="u-form u-form-1">
-          <form action="{% url 'registro_form' %}" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px;">
+          <form action="{% url 'post_registro_form' %}" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px;">
             {% csrf_token %}
             {{ form.as_p }}
             <input type="submit" value="Registrarse"/>
