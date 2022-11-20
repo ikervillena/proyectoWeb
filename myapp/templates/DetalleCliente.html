@@ -1,4 +1,4 @@
-{% load static%}
+{% load static %}
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="es"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.21.5, nicepage.com">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-theme-google-font" rel="stylesheet" href="{% static 'css/Registrarse.css' %}">
     
     
     <script type="application/ld+json">{
@@ -79,42 +79,10 @@
         <h1 class="u-text u-text-default u-text-1">Registrarse<br>
         </h1>
         <div class="u-form u-form-1">
-          <form action="https://forms.nicepagesrv.com/Form/Process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
-            <div class="u-form-group u-form-name">
-              <label for="name-6fb1" class="u-label">Nombre</label>
-              <input type="text" placeholder="Introduzca su nombre" id="name-6fb1" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
-            </div>
-            <div class="u-form-email u-form-group">
-              <label for="email-6fb1" class="u-label">Email</label>
-              <input type="email" placeholder="Introduzca una dirección de correo electrónico válida" id="email-6fb1" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
-            </div>
-            <div class="u-form-group u-form-name u-form-group-3">
-              <label for="name-03a5" class="u-label">Contraseña</label>
-              <input type="text" placeholder="Introduzca su contraseña" id="name-03a5" name="contraseña" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
-            </div>
-            <div class="u-form-group u-form-name u-form-group-4">
-              <label for="name-7353" class="u-label">Usuario</label>
-              <input type="text" placeholder="Introduzca su usuario" id="name-7353" name="usuario" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
-            </div>
-            <div class="u-form-date u-form-group u-form-group-5">
-              <label for="date-22ea" class="u-label">Fecha</label>
-              <input type="date" placeholder="MM/DD/AAAA" id="date-22ea" name="fechaNacimiento" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
-            </div>
-            <div class="u-form-agree u-form-group u-form-group-6">
-              <input type="checkbox" id="agree-6ea1" name="agreeTerminos" class="u-agree-checkbox" required="">
-              <label for="agree-6ea1" class="u-agree-label u-label">Yo acepto los <a href="#">Términos de servicio</a>
-              </label>
-            </div>
-            <div class="u-align-left u-form-group u-form-submit">
-              <a href="Inicio.html" class="u-border-none u-btn u-btn-submit u-button-style u-palette-5-dark-2 u-btn-1">Registrarse<br>
-              </a>
-              <input type="submit" value="submit" class="u-form-control-hidden">
-            </div>
-            <div class="u-form-send-message u-form-send-success">Gracias! Has sido registrado.</div>
-            <div class="u-form-send-error u-form-send-message">No se ha podido registrar. Por favor, corrija los errores y vuelva a intentarlo.</div>
-            <input type="hidden" value="" name="recaptchaResponse">
-            <input type="hidden" name="formServices" value="5a57c3d3d9449cb09320b8d8d02e8134">
-          </form>
+          <h2>Bienvenid@ {{cliente.nombre}}!</h2>
+          <h4>Nombre: {{cliente.nombre}}</h3>
+          <h4>Nombre de usuario: {{cliente.usuario}}</h3>
+          <h4>Email: {{cliente.email}}</h3>
         </div>
       </div>
     </section>
@@ -138,7 +106,7 @@
               </div>
               <div class="u-align-center-sm u-align-right-md u-container-style u-layout-cell u-size-1-md u-size-20-lg u-size-20-sm u-size-20-xl u-size-20-xs u-layout-cell-2">
                 <div class="u-container-layout u-valign-bottom-md u-container-layout-2">
-                  <img class="u-align-center-md u-align-center-sm u-align-center-xs u-image u-image-contain u-image-default u-image-1" src="static/images/IMConsultoraTecnolgica11.png" alt="" data-image-width="409" data-image-height="221">
+                  <img class="u-align-center-md u-align-center-sm u-align-center-xs u-image u-image-contain u-image-default u-image-1" src="images/IMConsultoraTecnolgica11.png" alt="" data-image-width="409" data-image-height="221">
                 </div>
               </div>
               <div class="u-align-center-sm u-align-center-xs u-align-left-md u-align-right-lg u-align-right-xl u-container-style u-layout-cell u-right-cell u-size-20-lg u-size-20-sm u-size-20-xl u-size-20-xs u-size-59-md u-layout-cell-3">
