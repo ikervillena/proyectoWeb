@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from .forms import ClienteForm
 from django.http import HttpResponse
+from django.views.generic.detail import DetailView
 from .models import Producto, Ordenador, Audio, Telefono, Cliente
 
 # Create your views here.
@@ -18,7 +19,7 @@ def post_registro_form(request):
         email_registro = form.cleaned_data['email']
         cliente = Cliente(nombre=nombre_registro, usuario=usuario_registro, contrasenya=contrasenya_registro, email=email_registro)
         cliente.save()
-        return HttpResponse(f"{nombre_registro}, registro correcto!")
+        return render(request, 'DetalleCliente.html', {'cliente': cliente})
 
 # Devuelve los datos de un ordenador por ID
 def ordenador(request):
