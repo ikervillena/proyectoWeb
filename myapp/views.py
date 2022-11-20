@@ -1,9 +1,15 @@
 from django.shortcuts import render
-from .models import Producto
+from .forms import ClienteForm
+from .models import Producto, Ordenador, Audio, Telefono
 
 # Create your views here.
 
-from django.http import HttpResponse
+def show_registro_form(request):
+    form = ClienteForm()
+    return render(request, 'Registro_form.html', {'form': form})
+
+def registrar(request):
+    return render(request, 'Registrarse.html')
 
 # Devuelve los datos de un ordenador por ID
 def ordenador(request):
@@ -37,3 +43,10 @@ def lista_telefonos(request):
     telefonos = Telefono.objects.order_by('precio')
     context = { 'lista_telefonos' : telefonos}
     return render (request, 'TipoProducto.html', context)
+
+def tipo_producto(request):
+    ordenadores = Ordenador.objects.order_by('precio')
+    audios = Audio.objects.order_by('precio')
+    telefonos = Telefono.objects.order_by('precio')
+    context = {'lista_ordenadores' : ordenadores, 'lista_audios' : audios, 'lista_telefonos' : telefonos}
+    return render (request, 'tipoProducto.html', context)

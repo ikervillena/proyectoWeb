@@ -14,7 +14,7 @@ class Producto(PolymorphicModel):
 
 class Ordenador(Producto):
     #Atributos
-
+    
     def __str__(self):
         return self.nombre
 
