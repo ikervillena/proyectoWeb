@@ -6,6 +6,9 @@ from .models import Producto, Ordenador, Audio, Telefono, Cliente
 
 # Create your views here.
 
+def inicio(request):
+    return render(request, 'Inicio.html')
+
 def show_registro_form(request):
     form = ClienteForm()
     return render(request, 'Registro_form.html', {'form': form})
