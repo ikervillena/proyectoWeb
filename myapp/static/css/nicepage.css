@@ -20,19 +20,19 @@ li {
 }
 
 #menu li a {
-  display: block;
+  display: inline-block;
   text-align: center;
   padding: 14px 16px;
-  color: royalblue;
+  color: ghostwhite;
 }
 
-li a:hover {
+#menu li a:hover {
   color: rgb(167, 166, 166);
 }
 
 .fr-clearfix::after {
   clear: both;
-  display: block;
+  display: inline-block;
   content: "";
   height: 0; }
 
@@ -1206,7 +1206,7 @@ a {
   white-space: nowrap;
 }
 .u-image.u-logo img {
-  display: block;
+  display: inline-block;
 }
 .u-form-horizontal {
   display: flex;
@@ -38262,11 +38262,13 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-header .u-logo-image-1 {
+  display: inline-block;
   width: 100%;
   height: 100%;
 }
 
 .u-header .u-menu-1 {
+  display: inline-block;
   margin: -81px -17px 60px auto;
 }
 
