@@ -8,5 +8,7 @@ urlpatterns = [
     path('audios/', views.audios, name="audios"),
     path('telefonos/', views.telefonos, name="telefonos"),
     path('inicio/', views.inicio, name="inicio"),
-    path('view/<int:producto_id>', views.detalle, name='vista_detalle')
+    path('ordenadores/<int:producto_id>', views.detalle, name='vista_detalle'),
+    path('telefonos/<int:producto_id>', views.detalle, name='vista_detalle'),
+    path('audios/<int:producto_id>', views.detalle, name='vista_detalle')
 ]

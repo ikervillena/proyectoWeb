@@ -1,6 +1,8 @@
 {% extends "TipoProducto.html" %}
 {% load static %}
 
+{% block nomProductos %} <p> Telefonos </p>{% endblock %}
+
 {% block productos %}
 <!--Sección de teléfonos-->
 <div class="u-expanded-width u-list u-list-2">
@@ -11,7 +13,7 @@
           <img alt="" class="u-expanded-width u-image u-image-default u-image-2" data-image-width="2000" data-image-height="1333" src="{% static '' %}images/{{ telefono.imagen }}">
           <h3 class="u-text u-text-default u-text-7">{{ telefono.nombre }}</h3>
           <p class="u-text u-text-8">{{ telefono.precio }} €</p>
-          <a href="" class="u-active-none u-border-2 u-border-hover-palette-2-base u-border-palette-2-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-4">Saber más</a>
+          <a href="{{telefono.pk}}" class="u-active-none u-border-2 u-border-hover-palette-2-base u-border-palette-2-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-4">Saber más</a>
         </div>
       </div>
       {% endfor %}

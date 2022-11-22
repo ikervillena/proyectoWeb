@@ -3,6 +3,7 @@ from .forms import ClienteForm
 from django.http import HttpResponse
 from django.views.generic.detail import DetailView
 from .models import Producto, Ordenador, Audio, Telefono
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 
