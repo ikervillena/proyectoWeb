@@ -4,6 +4,32 @@
  * Copyright 2014-2021 Froala Labs
  */
 
+.menu {
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: right;
+}
+
+#menu li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  color: red;
+}
+
+li a:hover {
+  color: rgb(167, 166, 166);
+}
+
 .fr-clearfix::after {
   clear: both;
   display: block;

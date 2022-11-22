@@ -1,8 +1,13 @@
 from django.shortcuts import render
 from .forms import ClienteForm
+from django.http import HttpResponse
+from django.views.generic.detail import DetailView
 from .models import Producto, Ordenador, Audio, Telefono
 
 # Create your views here.
+
+def inicio(request):
+    return render(request, 'Inicio.html')
 
 def show_registro_form(request):
     form = ClienteForm()
@@ -17,10 +22,10 @@ def ordenador(request):
     return HttpResponse(ordenador)
 
 # Devuelve la lista de ordenadores
-def lista_ordernadores(request):
+def ordenadores(request):
     ordenadores = Ordenador.objects.order_by('precio')
     context = { 'lista_ordenadores' : ordenadores}
-    return render (request, 'TipoProducto.html', context)
+    return render (request, 'ordenadores.html', context)
 
 # Devuelve los datos de un audio por ID
 def audio(request):
@@ -28,10 +33,10 @@ def audio(request):
     return HttpResponse(audio)
 
 # Devuelve la lista de audios
-def lista_audios(request):
+def audios(request):
     audios = Audio.objects.order_by('precio')
     context = { 'lista_audios' : audios}
-    return render (request, 'TipoProducto.html', context)
+    return render (request, 'audios.html', context)
 
 # Devuelve los datos de un telefono por ID
 def telefono(request):
@@ -39,10 +44,10 @@ def telefono(request):
     return HttpResponse(telefono)
 
 # Devuelve la lista de telefonos
-def lista_telefonos(request):
+def telefonos(request):
     telefonos = Telefono.objects.order_by('precio')
     context = { 'lista_telefonos' : telefonos}
-    return render (request, 'TipoProducto.html', context)
+    return render (request, 'telefonos.html', context)
 
 def tipo_producto(request):
     ordenadores = Ordenador.objects.order_by('precio')
@@ -50,3 +55,8 @@ def tipo_producto(request):
     telefonos = Telefono.objects.order_by('precio')
     context = {'lista_ordenadores' : ordenadores, 'lista_audios' : audios, 'lista_telefonos' : telefonos}
     return render (request, 'tipoProducto.html', context)
+
+def detalle(request, producto_id):
+    producto = get_object_or_404(Producto, pk = producto_id)
+    context = {'producto': producto}
+    return render(request, 'VistaDetalle.html', context)

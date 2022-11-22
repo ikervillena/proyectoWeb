@@ -14,18 +14,26 @@ class Producto(PolymorphicModel):
 
 class Ordenador(Producto):
     #Atributos
+    procesador = models.IntegerField(default=0)
+    microfono = models.CharField(max_length=10, default= 'microfono')
+    memoria = models.IntegerField(default=0)
     
     def __str__(self):
         return self.nombre
 
 class Telefono(Producto):
     #Atributos
+    acabado = models.CharField(default="", max_length=15)
+    capacidad = models.IntegerField(default=0)
+    pantalla = models.FloatField(default=0)
 
     def __str__(self):
         return self.nombre
 
 class Audio(Producto):
     #Atributos
+    numeroWoofer = models.IntegerField(default = 1)
+    diametroWoofer = models.FloatField(default=16)
 
     def __str__(self):
         return self.nombre
