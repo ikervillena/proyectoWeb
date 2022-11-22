@@ -10,5 +10,6 @@ urlpatterns = [
     path('inicio/', views.inicio, name="inicio"),
     path('ordenadores/<int:producto_id>', views.detalle, name='vista_detalle'),
     path('telefonos/<int:producto_id>', views.detalle, name='vista_detalle'),
-    path('audios/<int:producto_id>', views.detalle, name='vista_detalle')
+    path('audios/<int:producto_id>', views.detalle, name='vista_detalle'),
+    path('inicio/', views.inicio, name="inicio"),
 ]
