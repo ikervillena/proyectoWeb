@@ -57,7 +57,17 @@ def tipo_producto(request):
     context = {'lista_ordenadores' : ordenadores, 'lista_audios' : audios, 'lista_telefonos' : telefonos}
     return render (request, 'tipoProducto.html', context)
 
-def detalle(request, producto_id):
-    producto = get_object_or_404(Producto, pk = producto_id)
-    context = {'producto': producto}
-    return render(request, 'VistaDetalle.html', context)
+def detalleOrdenador(request, ordenador_id):
+    ordenador = get_object_or_404(Ordenador, pk=ordenador_id)
+    context = {'ordenador': ordenador}
+    return render(request, 'DetalleOrdenador.html', context)
+
+def detalleTelefono(request, telefono_id):
+    telefono = get_object_or_404(Telefono, pk=telefono_id)
+    context = {'telefono': telefono}
+    return render(request, 'DetalleTelefono.html', context)
+
+def detalleAudio(request, audio_id):
+    audio = get_object_or_404(Audio, pk=audio_id)
+    context = {'audio': audio}
+    return render(request, 'DetalleAudio.html', context)

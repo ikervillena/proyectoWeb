@@ -1,0 +1,26 @@
+{% extends "BaseDetalle.html" %}
+{% load static %}
+
+{% block title %} {{audio.nombre}} {% endblock %}
+
+
+{%block nomProducto%} 
+<p>{{audio.nombre}}</p>
+{%endblock%}
+
+{%block precio%} {{audio.precio}} {%endblock%}
+
+{%block descripcion%}
+
+<b>Descripción del producto: </b></p>
+<ul>
+    <li>{{audio.descripcion}}</li>
+    <li> Número de woofers: {{audio.numeroWoofer}} </li>
+    <li>Diametro de woofers: {{audio.diametroWoofer}}</li>
+</ul>
+
+{%endblock%}
+
+{%block img%}
+<img class="u-image u-image-default u-image-1" src="{% static '' %}images/{{ audio.imagen }}" alt="" data-image-width="1600" data-image-height="841"><!--product_button--><!--options_json--><!--{"clickType":"go-to-page","content":"Añadir al carrito"}--><!--/options_json-->
+{%endblock%}

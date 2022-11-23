@@ -1,0 +1,23 @@
+{% extends "BaseDetalle.html" %}
+{% load static %}
+
+{% block title %} {{telefono.nombre}} {% endblock %}
+
+
+{%block nomProducto%} 
+<p>{{telefono.nombre}}</p>
+{%endblock%}
+
+{%block precio%} {{telefono.precio}} {%endblock%}
+
+{%block descripcion%}
+
+<b>Descripción del producto: </b></p>
+<ul>
+    <li>{{telefono.descripcion}}</li>
+    <li> Procesador: {{telefono.acabado}} </li>
+    <li>Microfono: {{ordenador.capacidad}}</li>
+    <li>Memoria: {{ordenador.pantalla}}</li>
+</ul>
+
+{%endblock%}
