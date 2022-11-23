@@ -43,5 +43,7 @@ class Cliente(models.Model):
     usuario = models.CharField(max_length=60)
     contrasenya = models.CharField(max_length=60)
     email = models.EmailField()
-    fecha_nacimiento = models.DateField()
-    productos_guardados = models.ManyToManyField(Producto)
+    productos_guardados = models.ManyToManyField(Producto, blank=True)
+
+    def __str__(self):
+        return self.nombre
