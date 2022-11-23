@@ -1214,7 +1214,6 @@ a {
   flex-grow: 1;
 }
 .u-form-vertical {
-  display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
 }
@@ -1659,7 +1658,7 @@ a {
   margin-left: 11px;
 }
 .u-form-vertical.u-form-spacing-10 {
-  margin-left: -10px;
+  margin-left: 10px;
   width: calc(100% +  10px);
 }
 .u-form-vertical.u-form-spacing-10 .u-form-group {
