@@ -10,44 +10,38 @@
 
 
 {% block content %}
-  <body class="u-body u-xl-mode" data-lang="es">
-    <section class="u-clearfix u-section-1" id="sec-fff2">
-      <div class="u-clearfix u-sheet u-valign-middle-xs u-sheet-1"><!--product--><!--product_options_json--><!--{"source":""}--><!--/product_options_json--><!--product_item-->
-        <div class="u-container-style u-expanded-width u-product u-product-1">
-          <div class="u-container-layout u-container-layout-1"><!--product_title-->
-            <h2 class="u-align-left u-product-control u-text u-text-1">
-              <a class="u-product-title-link" href="#"><!--product_title_content-->
-
-
-                {%block nomProducto%} {%endblock%}<!--/product_title_content--></a>
-
-
-            </h2><!--/product_title--><!--product_price-->
-            <div class="u-product-control u-product-price u-product-price-1">
-              <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
-                <div class="u-hide-price u-old-price" style="text-decoration: line-through !important;"><!--product_old_price_content-->$20.00<!--/product_old_price_content--></div><!--/product_old_price--><!--product_regular_price-->
-                <div class="u-price u-text-palette-2-base" style="font-size: 1.875rem; font-weight: 700;"><!--product_regular_price_content-->
-                  
-                  {%block precio%} {%endblock%}€<!--/product_regular_price_content--></div><!--/product_regular_price-->
-
-                  
-              </div>
-            </div><!--/product_price--><!--product_content-->
-            <div class="u-align-left u-product-control u-product-desc u-text u-text-2"><!--product_content_content-->
-
-              {%block descripcion%} {%endblock%}<!--/product_content_content-->
-
-
-            </div><!--/product_content-->
-
-            {%block img%} {%endblock%}
+<section class="u-clearfix u-section-1" id="sec-fff2">
+  <div class="u-clearfix u-sheet u-sheet-1"><!--product--><!--product_options_json--><!--{"source":""}--><!--/product_options_json--><!--product_item-->
+    <div class="u-container-style u-expanded-width u-product u-product-1">
+      <div class="u-container-layout u-container-layout-1"><!--product_button--><!--options_json--><!--{"clickType":"go-to-page","content":"Atrás"}--><!--/options_json-->
+        <a href="./" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-product-control u-text-black u-text-hover-white u-btn-1"><!--product_button_content-->Atrás<!--/product_button_content--></a><!--/product_button--><!--product_title-->
+        <h2 class="u-align-left u-product-control u-text u-text-1">
+          <a class="u-product-title-link" href="#"><!--product_title_content-->
             
-            <a href="#" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-product-control u-text-black u-text-hover-white u-btn-1"><!--product_button_content-->Añadir al carrito<!--/product_button_content--></a><!--/product_button--><!--product_button--><!--options_json--><!--{"clickType":"go-to-page","content":"Favorito"}--><!--/options_json-->
-            <a href="#" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-product-control u-text-black u-text-hover-white u-btn-2"><!--product_button_content-->Favorito<!--/product_button_content--></a><!--/product_button-->
+            {%block nomProducto%} {%endblock%}
+            
+            <!--/product_title_content--></a>
+        </h2><!--/product_title-->
+
+        {%block img%} {%endblock%}
+
+        <div class="u-product-control u-product-price u-product-price-1">
+          <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+            <div class="u-hide-price u-old-price" style="text-decoration: line-through !important;"><!--product_old_price_content-->$20.00<!--/product_old_price_content--></div><!--/product_old_price--><!--product_regular_price-->
+            <div class="u-price u-text-palette-2-base" style="font-size: 1.875rem; font-weight: 700;"><!--product_regular_price_content-->{%block precio%} {%endblock%}€<!--/product_regular_price_content--></div><!--/product_regular_price-->
           </div>
-        </div><!--/product_item--><!--/product-->
+        </div><!--/product_price--><!--product_content-->
+        <div class="u-align-left u-product-control u-product-desc u-text u-text-2"><!--product_content_content-->
+
+          <p>{%block descripcion%} {%endblock%}</p><!--/product_content_content-->
+
+
+        </div><!--/product_content--><!--product_button--><!--options_json--><!--{"clickType":"go-to-page","content":"Añadir al carrito"}--><!--/options_json-->
+        <a href="#" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-product-control u-text-black u-text-hover-white u-btn-2"><!--product_button_content-->Añadir al carrito<!--/product_button_content--></a><!--/product_button--><!--product_button--><!--options_json--><!--{"clickType":"go-to-page","content":"Favorito"}--><!--/options_json-->
+        <a href="#" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-product-control u-text-black u-text-hover-white u-btn-3"><!--product_button_content-->Favorito<!--/product_button_content--></a><!--/product_button-->
       </div>
-    </section>
-</body>
+    </div><!--/product_item--><!--/product-->
+  </div>
+</section>
 
 {% endblock %}
