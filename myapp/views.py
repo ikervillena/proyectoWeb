@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import UsuarioForm
 from .forms import ClienteForm
 from django.http import HttpResponse
 from django.views.generic.detail import DetailView
@@ -9,6 +10,23 @@ from django.shortcuts import get_object_or_404
 
 def inicio(request):
     return render(request, 'Inicio.html')
+
+def show_inicioSesion_form(request):
+    form = UsuarioForm()
+    return render(request, 'inicioSesion_form.html', {'form': form})
+
+
+def post_inicioSesion_form(request):
+    form = UsuarioForm(request.POST)
+    if form.is_valid():
+        usuario_inicioSesion = form.cleaned_data['usuario']
+        contrasenya_inicioSesion = form.cleaned_data['contrasenya']
+        usuario = Cliente.objects.get(pk = usuario)
+        contrasenya = Cliente.objects.get(pk = contrasenya)
+
+        if usuario_inicioSesion == usuario and contrasenya_inicioSesion == contrasenya:
+            return render(request, 'DetalleCliente.html', {'usuario': usuario})
+
 
 def show_registro_form(request):
     form = ClienteForm()
