@@ -14,8 +14,8 @@ class Producto(PolymorphicModel):
 
 class Ordenador(Producto):
     #Atributos
-    procesador = models.IntegerField(default=0)
-    microfono = models.CharField(max_length=10, default= 'microfono')
+    proces = models.CharField(max_length=100, default = 'Intel')
+    sistemaDeAudio = models.CharField(max_length=100, default= 'microfono')
     memoria = models.IntegerField(default=0)
     
     def __str__(self):
