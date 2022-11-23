@@ -15,9 +15,13 @@
 <b>Descripción del producto: </b></p>
 <ul>
     <li>{{telefono.descripcion}}</li>
-    <li> Procesador: {{telefono.acabado}} </li>
-    <li>Microfono: {{ordenador.capacidad}}</li>
-    <li>Memoria: {{ordenador.pantalla}}</li>
+    <li>Acabado: {{telefono.acabado}} </li>
+    <li>Microfono: {{telefono.capacidad}}</li>
+    <li>Memoria: {{telefono.pantalla}}</li>
 </ul>
 
+{%endblock%}
+
+{%block img%}
+<img class="u-image u-image-default u-image-1" src="{% static '' %}images/{{ telefono.imagen }}" alt="" data-image-width="1600" data-image-height="841"><!--product_button--><!--options_json--><!--{"clickType":"go-to-page","content":"Añadir al carrito"}--><!--/options_json-->
 {%endblock%}
