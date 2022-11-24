@@ -29,9 +29,6 @@ def show_registro_form(request):
     form = ClienteForm()
     return render(request, 'Registro_form.html', {'form': form})
 
-def registrar(request):
-    return render(request, 'Registrarse.html')
-
 def post_registro_form(request):
     form = ClienteForm(request.POST)
     if form.is_valid():
