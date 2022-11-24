@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %} Inicio de sesión {% endblock %}
-{% block style %} <link rel="stylesheet" href="{% static 'css/TipoProducto.css' %}" media="screen"> {% endblock %}
+{% block style %} <link rel="stylesheet" href="{% static 'css/Registrarse.css' %}" media="screen"> {% endblock %}
 
 
 {% block content %}
@@ -16,9 +16,9 @@
             {% csrf_token %}
             {{ form.as_p }}
             <input type="submit" value="Iniciar Sesion"/>
-            <input type="submit" value="Registrarse"/>
           </form>
-        </div>
+          <h3>Si no estás registrado, <a href="http://127.0.0.1:8000/tienda/registro/"><input type="submit" value="Registrarse"/></a>
+        </div> 
       </div>
     </section>
 </body>
