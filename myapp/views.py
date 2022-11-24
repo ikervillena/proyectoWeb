@@ -40,7 +40,7 @@ def show_registro_form(request):
     form = ClienteForm()
     return render(request, 'Registro_form.html', {'form': form})
 
-# Página que recibe los datos introducidos por el usuario, almacena en la BBDD y los muestra en la página de detalle del usuario
+# Recibe los datos introducidos por el usuario, almacena en la BBDD y los muestra en la página de detalle del usuario
 def post_registro_form(request):
     form = ClienteForm(request.POST)
     if form.is_valid():
@@ -48,9 +48,16 @@ def post_registro_form(request):
         usuario_registro = form.cleaned_data['usuario']
         contrasenya_registro = form.cleaned_data['contrasenya']
         email_registro = form.cleaned_data['email']
-        cliente = Cliente(nombre=nombre_registro, usuario=usuario_registro, contrasenya=contrasenya_registro, email=email_registro)
-        cliente.save()
-        return render(request, 'DetalleCliente.html', {'cliente': cliente})
+
+        #Si el nombre de usuario ya existe, no registrar cliente. Si no existe, registrar cliente.
+        try:
+            cliente = Cliente.objects.get(usuario=usuario_registro)
+            form = ClienteForm()
+            return render(request, 'Registro_form.html', {'form': form})
+        except Cliente.DoesNotExist:
+            cliente = Cliente(nombre=nombre_registro, usuario=usuario_registro, contrasenya=contrasenya_registro, email=email_registro)
+            cliente.save()
+            return render(request, 'DetalleCliente.html', {'cliente': cliente})
 
 # Devuelve los datos de un ordenador por ID
 def ordenador(request):
