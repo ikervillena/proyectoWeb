@@ -21,12 +21,9 @@ def post_inicioSesion_form(request):
     if form.is_valid():
         usuario_inicioSesion = form.cleaned_data['usuario']
         contrasenya_inicioSesion = form.cleaned_data['contrasenya']
-        usuario = Cliente.objects.get(pk = usuario)
-        contrasenya = Cliente.objects.get(pk = contrasenya)
-
-        if usuario_inicioSesion == usuario and contrasenya_inicioSesion == contrasenya:
-            return render(request, 'DetalleCliente.html', {'usuario': usuario})
-
+        usuario = Cliente.objects.get(usuario=usuario_inicioSesion)
+        contrasenya = Cliente.objects.get(contrasenya=contrasenya_inicioSesion)
+        return render(request, 'DetalleCliente.html', {'usuario': usuario, 'contrasenya':contrasenya})
 
 def show_registro_form(request):
     form = ClienteForm()
