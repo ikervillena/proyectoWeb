@@ -15,27 +15,27 @@ def show_inicioSesion_form(request):
     form = UsuarioForm()
     return render(request, 'inicioSesion_form.html', {'form': form})
 
-
+# Comprueba el inicio de sesión y redirige a página de detalle del usuario
 def post_inicioSesion_form(request):
     form = UsuarioForm(request.POST)
     if form.is_valid():
         usuario_inicioSesion = form.cleaned_data['usuario']
         contrasenya_inicioSesion = form.cleaned_data['contrasenya']
-        usuario = Cliente.objects.get(usuario=usuario_inicioSesion)
-        contrasenya = Cliente.objects.get(contrasenya=contrasenya_inicioSesion)
-        return render(request, 'DetalleCliente.html', {'usuario': usuario, 'contrasenya':contrasenya})
+        # Si el cliente no existe, se mantiene la página de inicio de sesión
+        try:
+            cliente = Cliente.objects.get(usuario=usuario_inicioSesion)
+        except Cliente.DoesNotExist:
+            form = UsuarioForm()
+            return render(request, 'inicioSesion_form.html', {'form': form})
+           
+        if cliente.contrasenya==contrasenya_inicioSesion:
+            return render(request, 'DetalleCliente.html', {'cliente': cliente, })
 
 def show_registro_form(request):
     form = ClienteForm()
     return render(request, 'Registro_form.html', {'form': form})
 
-<<<<<<< HEAD
-def registrar(request):
-    return render(request, 'Registrarse.html')
-
-=======
 # Recibe los datos introducidos por el usuario, almacena en la BBDD y los muestra en la página de detalle del usuario
->>>>>>> 1dce1989b20e1c60f5cd451f6bf1ad7ea6273049
 def post_registro_form(request):
     form = ClienteForm(request.POST)
     if form.is_valid():
