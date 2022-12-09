@@ -19,6 +19,7 @@ class OrdenadorAdmin(admin.ModelAdmin):
     ]
 
     list_display= ('nombre', 'descripcion', 'precio')
+    search_fields=['descripcion', 'nombre']
     list_filter= ['precio']
 
 admin.site.register(Ordenador, OrdenadorAdmin)
@@ -30,6 +31,7 @@ class TelefonoAdmin(admin.ModelAdmin):
         ('Otros datos', {'fields': ['acabado', 'capacidad', 'pantalla']}),
     ]
     list_display= ('nombre', 'descripcion', 'precio')
+    search_fields=['descripcion', 'nombre']
     list_filter= ['precio']
 
 #Agruparlo y ponerle titulos
@@ -41,6 +43,7 @@ class AudioAdmin(admin.ModelAdmin):
         ('Otros datos', {'fields': ['numeroWoofer', 'diametroWoofer']}),
     ]
     list_display= ('nombre', 'descripcion', 'precio')
+    search_fields=['descripcion', 'nombre']
     list_filter= ['precio']
 
 admin.site.register(Audio, AudioAdmin)
@@ -54,5 +57,7 @@ class ClienteAdmin(admin.ModelAdmin):
     ]
 
     list_display= ('nombre', 'usuario', 'email')
+    search_fields=['usuario', 'nombre']
+    list_filter= ['productos_guardados']
 
 admin.site.register(Cliente, ClienteAdmin)
