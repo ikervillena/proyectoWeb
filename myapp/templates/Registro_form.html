@@ -15,11 +15,12 @@
           <form action="{% url 'post_registro_form' %}" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px;">
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" value="Registrarse"/>
+            <input type="submit" value="Registrarse" id="registrar"/>
           </form>
         </div>
       </div>
     </section>
+    <script src="{%static 'js/registro.js'%}"></script>
 </body>
 
 {% endblock %}
