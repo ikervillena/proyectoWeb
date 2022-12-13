@@ -1,0 +1,292 @@
+var whoson_global = {
+    layout: "sony",
+    color: "red",
+    server: "https://sonyemea.whoson.com/newchat/",
+    position: "bottom-right",
+    height: "550",
+    width: "470",
+    mode: "inline", 
+    mobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+    imagemode: "image",
+    onlineText: "Click to Chat", 
+    offlineText: "Leave a Message",  
+    onlineChatwindowTitle: "Chat Sony (España)", 
+    offlineChatwindowTitle: "Chat Sony (España)",
+    poweredBy: "Creado por",
+    offlineBehaviour: "hidden", 
+    onlineImageURL: "https://sonyemea.whoson.com/siteimage.htm?d=www.sony.es&imagetype=6",
+    offlineImageURL: "https://sonyemea.whoson.com/siteimage.htm?d=www.sony.es&imagetype=7",
+    protocol: window.location.protocol,
+    onlineimage: window.location.protocol + '//sonyemea.whoson.com/stat.gif?domain=www.sony.es',
+    offlineimage: window.location.protocol + '//sonyemea.whoson.com/stat.gif?domain=www.sony.es',
+    templates: {},
+    domain: "www.sony.es",
+    department: null,
+    language: null,
+    session: null,
+    debugOptions: { enabled: false, depth: false, timing: false, safeScript: true },
+    debugLog: function (msg, lvl) {
+        var d = whoson_global.debugOptions;
+        if (d.enabled === true) {
+            console.log("%c" + (d.timing ? " " + Date.now() + " " : "") + "WhosOn Chat: " + msg, 'background:#f3f3f3;color:#6971e9;');
+        }
+        if (d.depth === true) {
+            if (d.depth) console.log("%c " + depth, 'color:#67BC9A;');
+        }
+    },
+    applicationLink: "{applicationLink}",
+    applicationTitle: "{applicationTitle}",
+    checkStatus: null,
+    customParameters: {},
+    checkStatus: null,
+    jq: null,
+    iterations: 0,
+    statusPage: window.location.protocol + '//sonyemea.whoson.com/w.js?domain=www.sony.es&callback=whoson_global.checkStatus',
+    invites: true,
+    dfd: null,
+    online: null,
+    hidden: false,
+    applicationLink: "https://www.whoson.com",
+    applicationTitle: "WhosOn",
+    chatInitialised: false,
+    hideChatButton: false
+};
+
+
+whoson_global.server = "https://sonyemea.whoson.com/newchat/";
+whoson_global.domain = "www.sony.es";
+whoson_global.version = "sony-21.11.823";
+
+function set_skill(country, language, skill, subskill) {
+    whoson_global.language = language;
+    country = country.toUpperCase();
+
+    if (country === "GB" || country === "IE") {
+        country = "UK";
+    }
+    if (skill === "Mobile") {
+        site = country + " Mobile";
+    } else if (skill === "Electronics"){
+        site = country + " Electronics";
+    } else if (skill === "eCommerce"){
+        site = country + " eCommerce";
+    } else if (skill === "Sales"){
+        if (subskill !== undefined){
+            site = country + " Sales," + subskill;
+        }else{
+			site = country + " Sales";
+		}
+    } else {
+        site = "UK Electronics";
+    }
+
+    whoson_global.customParameters.sn = site.replace(" ", "%20");
+    return;
+}
+
+function whoson_init(wo) {
+    if (wo.offlineChatwindowTitle.indexOf('{') > -1) wo.offlineChatwindowTitle = "WhosOn Live Chat";
+    if (wo.poweredBy.indexOf('{') > -1) wo.poweredBy = "Powered By";
+
+    if (wo.mobile) {
+        wo.onlineImageURL = "https://sonyemea.whoson.com/siteimage.htm?d=www.sony.es&imagetype=11";
+        wo.offlineImageURL = "https://sonyemea.whoson.com/siteimage.htm?d=www.sony.es&imagetype=12";
+    }
+    var date = new Date();
+    var cookie = document.cookie.toString();
+    if (cookie.indexOf("whoson") === -1) {
+        wo.session = parseInt(Math.random() * 1000) + "-" + date.getTime();
+        document.cookie = "whoson=" + wo.session + ";expires=" + new Date(new Date().getTime() + 1000 * 31540000).toUTCString() + "; path=/";
+    }
+    else {
+        var s = cookie.indexOf("whoson=") + "whoson=".length;
+        var e = cookie.indexOf(";", s);
+        if (e === -1) {
+            e = cookie.length;
+        }
+        wo.session = cookie.substring(s, e);
+    }
+
+    if (typeof $ === "function" && typeof jQuery !== "undefined" && typeof jQuery.fn !== "undefined" && typeof jQuery.fn.jquery === "string") {
+        if (jQuery.fn.jquery.split(".")
+            .map(function (i) { return ("0" + i).slice(-2); })
+            .join(".") < "01.11.03") {
+            loadJQuery();
+        } else {
+            wo.debugLog("jQuery version OK!");
+            wo.jq = jQuery;
+            jQueryLoaded();
+        }
+    } else {
+        wo.debugLog("no jQuery");
+        loadJQuery();
+    }
+
+    function loadJQuery() {
+        getScript(wo.server + 'vendor/jquery/jquery-3.5.1.min.js', false, function () {
+            wo.jq = jQuery.noConflict(true);
+            jQueryLoaded();
+        });
+    }
+
+    function refreshWindow () {
+        var chatOpen = false;
+        var chatActive = false;
+        wo.debugLog("Status Changed");
+        //wo.jq('body').wochat();
+
+        wo.on = wo.jq('.wo-inline').length > 0 ? true : false;
+        if (wo.jq('#wo_chat_arrow').is(":visible") || wo.jq('#wo_chat_header').is(":visible")) { chatOpen = true; }
+        if (sessionStorage.getItem('activeChat')) { chatActive = sessionStorage.getItem('activeChat') === "true"; }
+
+        var chatSession = sessionStorage.getItem('chat-session');
+
+        if(chatSession !== null){
+            chatActive = true;
+        }
+
+
+        if (wo.hidden == false) {
+            if (wo.online || chatActive === true) {            
+
+                if (chatOpen === false) {
+                    window.inline.setOnline();                  
+                }
+
+            }
+            if (wo.online === false && chatActive === false) {                
+                window.inline.hideInline(); 
+            }
+
+        } else if (wo.hidden) {
+            window.inline.hideInline();     
+        }
+
+    };
+
+    function statusCheckResponse(r) {
+        var on = r.online !== 0;
+        if (on !== whoson_global.online) {
+            whoson_global.online = on;
+            refreshWindow();
+        }
+    }
+
+    wo.checkStatus = statusCheckResponse;
+
+    function checkStatus() {
+        var script = wo.statusPage + "&x=1";
+        getScript(script, true);
+    }
+
+    function trackPage() {
+        var page = window.location.hostname === whoson_global.domain ? window.location.pathname + window.location.search : window.location.href;
+
+        var params = {
+            u: wo.session,
+            p: page,
+            r: document.referrer
+        };
+
+        wo.jq.extend(params, wo.customParameters);
+        wo.statusPage = wo.statusPage + '&' + wo.jq.param(params);
+        getScript(wo.statusPage, false);
+
+        if (wo.invites) getScript(wo.statusPage.replace('w.js', 'invite.js'), true, function () {
+            if (typeof (woAfterLoad) == 'function') {
+                woAfterLoad();
+                woAfterLoad = function () { };
+            }
+        });
+        checkStatus();
+        setInterval(checkStatus, 30000);
+    }
+
+    wo.getChatWindow = function () { return wo.jq('body').data('wochat') }
+
+    function jQueryLoaded() {
+        wo.dfd = new wo.jq.Deferred();
+        getScript(wo.server + "js/sony-inline.js", false, function () {
+            inlineChat(whoson_global);
+            trackPage();
+        });
+    }
+
+    function getScript(url, poll, success) {
+        if (poll) {
+            wo.jq("#whoson_poll").remove();
+        }
+
+        if (wo.jq && !wo.debugOptions.safeScript) {
+            wo.jq.getScript(url).done(function () { if (typeof success === "function") success(); });
+        } else {
+            var script = document.createElement("script");
+            script.src = url;
+            if (poll) script.id = "whoson_poll";
+            var head = document.getElementsByTagName("head")[0],
+                done = false;
+
+            script.onload = script.onreadystatechange = function () {
+                if (!done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete")) {
+                    done = true;
+                    if (typeof success === "function") success();
+                    script.onload = script.onreadystatechange = null;
+                }
+            };
+
+            head.appendChild(script);
+        }
+    }
+    
+    return true;
+}
+
+var externalShowChat = function() {
+    window.inline.openElement();
+}
+
+
+var sWOTrackPage = function (args) {
+    if (window.location.search.indexOf('whosondebug') >= 0) whoson_global.debugOptions = { enabled: true, depth: false, timing: true, safeScript: true };
+    if (typeof args === "object") {
+        whoson_global.customParameters = args;
+    }
+    return whoson_init(whoson_global);
+};
+var chatting = false;
+
+function sWOAddVariable(pFi, pFv) {
+  // Custom Sony
+  pFv = pFv.replace(/\n|\r/gi, ' %0A');
+  //
+  if (document.getElementById('wo_chatholder_wo')) {
+    whoson_global.customParameters[pFi] = pFv;
+  } else {
+    whoson_global.customParameters[pFi] = pFv;
+  }
+}
+
+function sendJSONData(data) {
+  inline.sendData(data);
+}
+
+var sonyTimer = setInterval(positionMobileButton, 100);
+
+function positionMobileButton() {
+  function GetElement(className) {
+    var elems = document.getElementsByClassName(className);
+    if(elems.length > 0) return elems[0];
+    return null;
+  }
+  var cartElement = GetElement("sticky-nav");
+  var buttonElement = GetElement("wo-inline-button");
+  if (buttonElement) {
+    if (cartElement) {
+      buttonElement.classList.add('wo-sony-cart');
+      buttonElement.style.bottom = cartElement.clientHeight - 3 + 'px';
+    } 
+    else {
+      buttonElement.classList.remove('wo-sony-cart');
+    }
+  }
+}

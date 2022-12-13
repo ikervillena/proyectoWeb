@@ -1,0 +1,435 @@
+window.inline = {
+  inlineOpen: false,
+  setScrollTimer: null,
+  isScrolling: false,
+  settings: {},
+  wo: undefined,
+  markup: undefined,
+  containerHeight: 0,
+  inChat: false,
+  chatuid: undefined,
+  chatting: false,
+  chatEvents: {
+    BUSY_LOADED: "busy_loaded",
+    QUEUE_LOADED: "queue_loaded",
+    PRECHAT_LOADED: "prechat_loaded",
+    MAINCHAT_LOADED: "mainchat_loaded",
+    POSTCHAT_LOADED: "postchat_loaded",
+    INLINE_LOADED: "inline_loaded",
+    DEACTIVATE_CHAT: "deactivate_chat",
+    ACTIVATE_CHAT: "activate_chat",
+    MESSAGE_RECEIVED: "messageReceived",
+    MINIMISE_CHAT: "minimise_chat",
+    INLINE_HARDRELOAD: "inline_hardreload",
+    CHAT_NOTIFICATION: "chat_notification",
+    CLEAR_CHAT_NOTIFICATION: "clear_chat_notification",
+    POSTCHAT_SUBMITTED: "postchat_submitted",
+    MESSAGE_SENT: "message_sent",
+    USER_CHANGED: "user_changed",
+    CHAT_INFO: "chat_info",
+  },
+  init(wo) {   
+    inline.wo = wo;
+    inline.version = "sony-21.11.838";
+    inline.wo.notify = 0;
+    inline.wo.arrow = wo.server + "themes/colors/sony/arrow-icon.png";
+    inline.settings = {
+      applicationTitle: wo.applicationTitle && wo.applicationTitle !== "{applicationTitle}" ? wo.applicationTitle : "WhosOn",
+      applicationLink:
+        wo.applicationLink && wo.applicationLink !== "{applicationLink}" ? wo.applicationLink : "https://www.whoson.com/track?utm_source={domain}&utm_campaign=wostacked&utm_medium=poweredby",
+      imageInvite: wo.imagemode == "text" ? false : true,
+      isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+      version: "$WOVER$",
+    };
+    inline.checkStorage();
+    addCss(wo.server + "/css-inline/inline.css");
+    window.addEventListener("message", inline.chatWindowMessage, false);
+    window.addEventListener("resize", inline.resize);
+    var viewHeight = window.innerHeight;
+    var head = 61;
+    var frame = parseInt(inline.wo.height);
+    var footer = 25;
+    var totalHeight = parseInt(head) + parseInt(frame) + parseInt(footer);
+    if (parseInt(totalHeight) > viewHeight) {
+      frame = parseInt(frame) - 150;
+      totalHeight = parseInt(totalHeight) - 150;
+    }
+
+    inline.containerHeight = totalHeight + 4;
+    inline.setMarkUp();
+    inline.setInlineButton();
+    inline.setNotification();
+    inline.raiseEvent(inline.chatEvents.INLINE_LOADED);
+  },
+  resize() {
+    if (inline.inlineOpen) {
+      var viewHeight = window.innerHeight;
+      var head = 36;
+      var frame = parseInt(inline.wo.height);
+      var footer = 25;
+      var totalHeight = parseInt(head) + parseInt(frame) + parseInt(footer);
+      inline.setFrameSize(frame);
+      if (parseInt(totalHeight) > viewHeight) {
+        frame = parseInt(frame) - 150;
+        inline.setFrameSize(frame);
+        totalHeight = parseInt(totalHeight) - 150;
+      }
+
+      var container = document.getElementsByClassName("wo-inline-container")[0];
+      container.style.height = (totalHeight + 4) + "px";
+    }
+  },
+  checkStorage() {
+    if (!window.storageAvailable) {
+      return;
+    }
+    if (typeof Storage !== "undefined") {
+      window.storageAvailable = "true";
+      window.sessionStorage.windowUp = "closed";
+    } else {
+      throwError("error: browser storage not available");
+    }
+  },
+  setMarkUp() {
+    inline.markup = `
+    <div class="wo-inline-button">
+        <div class="wo-button"><img id='wo_onImage' src='${inline.wo.onlineImageURL}' /></div>
+    </div>
+    <div class="wo-inline-container">
+        <div class="wo-inline-header wo-inline-close-btn">
+        <div class="header-title">
+        <span class="header-text">
+       ${inline.wo.onlineChatwindowTitle}</span>
+            <div class="header-close-container arrowDown">            
+              
+            </div>
+        </div>           
+    </div> 
+          
+        <div class="wo-inline-iframe">
+          <iframe id='wo_chatholder_wo' class='wo-frame' sandbox='allow-same-origin allow-scripts allow-popups allow-forms' src='' style='border: 0; width:100%;'></iframe>
+        </div>   
+        <div class="wo-inline-footer">
+            <a href='${inline.wo.applicationLink}' target='_blank' class="wo-application-link">Powered by ${inline.wo.applicationTitle}</a>
+        </div>
+    </div>
+    `;
+  },
+  setInlineButton() {
+    var documentBody = document.getElementsByTagName("body")[0];
+    var inlineElement = document.createElement("div");
+    inlineElement.classList.add("wo-inline");
+    inlineElement.innerHTML = inline.markup;
+    documentBody.appendChild(inlineElement);
+    inline.bindButtonevents();
+  },
+  bindButtonevents() {
+    var openButton = document.getElementsByClassName("wo-button")[0];
+    var closeButton = document.getElementsByClassName("wo-inline-close-btn")[0];
+    openButton.addEventListener("click", inline.openElement);
+    closeButton.addEventListener("click", inline.closeElement);
+  },
+  hideInline() {
+    var inlineElement = document.getElementsByClassName("wo-inline")[0];
+    if(inlineElement != undefined) {
+      inlineElement.classList.add("hidden");
+    }
+  },
+  setNotification() {
+    var inlineButton = document.getElementsByClassName("wo-inline-button")[0];
+    var notification = document.createElement("div");
+    notification.classList.add("notification-bubble");
+    notification.setAttribute("id", "wo_notification_counter");
+    notification.style.display = "none";
+    inlineButton.appendChild(notification);
+  },
+  setChat() {
+    if(whoson_global.chatInitialised) { return ;};
+    //console.log("Set chat frames");
+    var frame = parseInt(inline.wo.height);
+    inline.setFrame(inline.getURL(inline.wo.server, "chat.aspx"));
+    if(inline.settings.isMobile){
+      inline.setFrame(inline.getURL(inline.wo.server, "mobile.aspx"));
+    }
+    inline.setFrameSize(frame);
+    whoson_global.chatInitialised = true;
+  },
+  setOnline() {
+    //console.log("Set Online Called");  
+    var inlineElement = document.getElementsByClassName("wo-inline")[0];
+    var inlineButton = document.getElementsByClassName("wo-inline-button")[0];
+    var buttonImage = document.getElementById("wo_onImage");
+    if(inline.wo.hideChatButton){
+      inlineElement.classList.remove("hidden");
+      inlineButton.classList.add("hidden");
+      return;
+    }else{
+      inlineElement.classList.remove("hidden");
+      inlineButton.classList.add("enter");
+      inlineButton.classList.remove("offline");
+      inlineButton.classList.add("online");
+      buttonImage.setAttribute('src', inline.wo.onlineImageURL);
+      if (window.sessionStorage.windowUp == "open") {
+        inline.openElement();
+      }
+    }
+    
+  },
+  setOffline() {
+    if(inline.wo.hidden){
+      return;
+    }
+    var inlineButton = document.getElementsByClassName("wo-inline-button")[0];
+    var buttonImage = document.getElementById("wo_onImage");
+    if (inline.wo.imagemode == "image") {
+      buttonImage.setAttribute('src', inline.wo.offlineImageURL);
+    }
+    if (inline.wo.offlineBehaviour == "hidden") {
+      inlineButton.classList.remove("enter");
+      return;
+    }
+    inlineButton.classList.add("enter");
+    inlineButton.classList.remove("online");
+    inlineButton.classList.add("offline");
+    if (window.sessionStorage.windowUp == "open") {
+      inline.openElement();
+    }
+  },
+  sendData(data){
+    var jsonData = JSON.parse(data);
+    if(inline.chatuid == undefined){
+      return;
+    };
+    const fieldData = new Array();
+    for (const [key, value] of Object.entries(jsonData)) {
+      var fieldObject = {
+          FieldName: key,
+          FieldValue: value
+      };
+      if(key === "Chat Session ID"){
+          fieldObject.FieldValue = inline.chatuid;
+      }
+      fieldData.push(fieldObject);
+    };  
+  
+    var iframeWin = document.getElementById("wo_chatholder_wo");
+    if (inline.chatting) {
+      if (iframeWin != undefined) {
+          iframeWin.contentWindow.postMessage(fieldData, whoson_global.server);
+      } else {
+        return;
+      }
+    } else {
+      return;
+    }
+  },
+  setChat() {
+    if(whoson_global.chatInitialised) { return ;};
+    //console.log("Set chat frames");
+    var frame = parseInt(inline.wo.height);
+    inline.setFrame(inline.getURL(inline.wo.server, "chat.aspx"));
+    if(inline.settings.isMobile){
+      inline.setFrame(inline.getURL(inline.wo.server, "mobile.aspx"));
+    }
+    inline.setFrameSize(frame);
+    whoson_global.chatInitialised = true;
+  },
+  resetChat() {
+    //console.log("Reset Chat");
+    var iFrame = document.getElementsByClassName("wo-frame")[0];
+    iFrame.src = "";
+    whoson_global.chatInitialised = false;
+    window.sessionStorage.clear();
+    inline.closeElement();
+  },
+  openElement() {    
+    //console.log("Open Inline");
+    inline.setChat();
+    inline.raiseEvent(inline.chatEvents.CLEAR_CHAT_NOTIFICATION);
+    var inlineContainer = document.getElementsByClassName("wo-inline-container")[0];
+    var documentBody = document.getElementsByTagName("body")[0];
+    var inlineButton = document.getElementsByClassName("wo-inline-button")[0];
+    inline.inlineOpen = true;
+    window.sessionStorage.windowUp = "open";
+    inlineButton.classList.remove("enter");
+    inlineContainer.classList.add("open");
+    inline.resize();
+    if (inline.settings.isMobile) {
+      var overlay = document.getElementsByClassName("wo-inline-overlay")[0];
+      if (overlay == undefined) {
+        overlay = document.createElement("div");
+        overlay.classList.add("wo-inline-overlay");
+        documentBody.appendChild(overlay);
+      }
+    }
+  },
+  closeElement() {
+    var inlineContainer = document.getElementsByClassName("wo-inline-container")[0];
+    var documentBody = document.getElementsByTagName("body")[0];
+    var inlineButton = document.getElementsByClassName("wo-inline-button")[0];
+    inline.inlineOpen = false;
+    window.sessionStorage.windowUp = "closed";
+    inlineContainer.classList.remove("open");
+    inlineContainer.style.height = "0px";
+    if (inline.settings.isMobile) {
+      var overlay = document.getElementsByClassName("wo-inline-overlay")[0];
+      if (overlay != undefined) {
+        documentBody.removeChild(overlay);
+      }
+    }
+    setTimeout(function () {
+      if (inline.wo.online && inline.wo.hideChatButton == false) {
+        inlineButton.classList.add("enter");
+      }
+    }, 100);
+  },
+  setFrame(url) {
+    var woframe = document.getElementsByClassName("wo-inline-iframe")[0];
+    var iFrame = document.getElementsByClassName("wo-frame")[0];
+    var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+    if (woframe != undefined) {
+      var iFrame;
+      if (isIE11) {
+        iFrame = "<iframe class='wo-frame' src='" + url + "' style='border: 0; width:100%;'></iframe>";
+        woframe.innerHTML = iFrame;
+      } else {
+        iFrame.src = url;
+      }
+    }
+  },
+  setFrameSize(size) {
+    var woframe = document.getElementsByClassName("wo-frame")[0];
+    woframe.style.height = size + "px";
+  },
+  getURL(server, file, queryStringVal) {
+    var url = server + file + "?domain=" + inline.wo.domain + "&emb=true";
+    if (inline.wo.department) url = url + "&dept=" + inline.wo.department;
+    if (inline.wo.language) url = url + "&lang=" + inline.wo.language;
+    if (inline.wo.session) url = url + "&session=" + inline.wo.session;
+    if (queryStringVal) url = url + queryStringVal;
+    if (inline.wo.customParameters) {
+      for (var name in inline.wo.customParameters) {
+        if (inline.wo.customParameters.hasOwnProperty(name)) {
+          url += "&x-" + name + "=" + inline.wo.customParameters[name];
+        }
+      }
+    }
+    return url;
+  },
+  externalShowChat() {
+    if(sessionStorage.activeChat){
+      if (sessionStorage.windowUp == "closed" || sessionStorage.windowUp) {
+        inline.openElement();
+      }
+    }
+  },
+  raiseEvent(eventName, altTrigger, data) {
+    if (eventName.length <= 0) return;
+    var documentBody = document.getElementsByTagName("body")[0];
+    try {
+      parent.postMessage(JSON.stringify({ message: eventName, data: data || null }), "*");
+      if (typeof altTrigger == "undefined" || altTrigger == null) {
+        let message = new Event("message");
+        documentBody.dispatchEvent(message);
+      } else {
+        documentBody.dispatchEvent(altTrigger);
+      }
+    } catch (e) {
+      inline.throwError("Error: occured when raising chat event " + eventName);
+    }
+  },
+  chatWindowMessage(event) {
+    //console.log(event);
+    try {
+      if (inline.wo.server.lastIndexOf(event.origin, 0) == 0) {
+        var data = JSON.parse(event.data);
+        switch (data.message) {
+          case "activate_chat":
+            sessionStorage.setItem("activeChat", true);
+            break;
+          case "deactivate_chat":
+            sessionStorage.setItem("activeChat", false);
+            inline.chatting = false;
+            break;
+          case "minimise_chat":
+            inline.closeElement();
+            break;
+          case "chat_info":
+              var chatuid = data.data;
+              if (chatuid != null) {
+                sessionStorage.setItem("activeChat", true);
+                inline.chatuid = chatuid;
+                inline.chatting = true;
+              }
+            break;
+          case "chat_notification":
+            inline.incrementInlineNotifications();
+            break;
+          case "clear_chat_notification":
+            inline.clearInlineNotifications();
+            break;
+          case "messageReceived":
+            inline.externalShowChat();
+            break;
+            case "postchat_submitted":
+            sessionStorage.setItem("activeChat", false);
+            inline.resetChat();
+              break;
+              case "inline_hardreload":
+                sessionStorage.setItem("activeChat", false);
+                inline.resetChat();
+                break;
+                case "prechat_loaded":
+                  console.log("prechat-loaded");
+                  var iframeWin = document.getElementById("wo_chatholder_wo");
+                  if (iframeWin != undefined) {
+                    iframeWin.contentWindow.postMessage("surveysLoaded", whoson_global.server);
+                } else {
+                  return;
+                }
+                  break;
+        }
+      }
+    } catch (e) {
+      inline.throwError("Exception: in woChatWindowMessage: " + e.toString());
+    }
+  },
+  incrementInlineNotifications() {
+    var inlineContainer = document.getElementsByClassName("wo-inline-container")[0];
+    if (inlineContainer.style.height == 0) {
+      inline.wo.notify++;
+      //inline.updateInlineNotifications();
+    }
+  },
+  clearInlineNotifications() {
+    inline.wo.notify = 0;
+    //inline.updateInlineNotifications();
+  },
+  updateInlineNotifications() {
+    var notification = document.getElementById("wo_notification_counter");
+    if (inline.wo.notify === 0) {
+      notification.style.display = "none";
+    } else {
+      if ((notification.style.display = "none")) {
+        notification.style.display = "inline";
+      }
+      notification.innerText = inline.wo.notify;
+    }
+  },
+  throwError(error) {
+    console.log("%c" + error, "color: #ff1000");
+  },
+};
+
+function addCss(fileName) {
+  var head = document.head;
+  var link = document.createElement("link");
+  link.type = "text/css";
+  link.rel = "stylesheet";
+  link.href = fileName;
+  head.appendChild(link);
+};
+
+var inlineChat = (wo) => {
+  window.inline.init(wo);
+};
