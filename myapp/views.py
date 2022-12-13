@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .forms import UsuarioForm
 from .forms import ClienteForm
 from django.http import HttpResponse
-from django.views.generic.detail import DetailView
+from django.views.generic import DetailView, ListView
 from .models import Producto, Ordenador, Audio, Telefono, Cliente
 from django.shortcuts import get_object_or_404
 
@@ -54,38 +54,52 @@ def post_registro_form(request):
             cliente.save()
             return render(request, 'DetalleCliente.html', {'cliente': cliente})
 
-# Devuelve los datos de un ordenador por ID
-def ordenador(request):
-    ordenador = Ordenador.objects.get(pk = ordenador_id)
-    return HttpResponse(ordenador)
+class OrdenadorListView(ListView):
+    model = Ordenador
+    template_name = 'ordenadores.html'
+    queryset = Ordenador.objects.order_by('precio')
+    context_object_name = 'lista_ordenadores'
 
-# Devuelve la lista de ordenadores
-def ordenadores(request):
-    ordenadores = Ordenador.objects.order_by('precio')
-    context = { 'lista_ordenadores' : ordenadores}
-    return render (request, 'ordenadores.html', context)
+    def get_context_data(self, **kwargs):
+        context = super(OrdenadorListView, self).get_context_data(**kwargs)
+        context['titulo_pagina'] = 'Ordenadores'
+        return context
 
-# Devuelve los datos de un audio por ID
-def audio(request):
-    audio = Audio.objects.get(pk = audio_id)
-    return HttpResponse(audio)
+class AudioListView(ListView):
+    model = Audio
+    template_name = 'audios.html'
+    queryset = Audio.objects.order_by('precio')
+    context_object_name = 'lista_audios'
 
-# Devuelve la lista de audios
-def audios(request):
-    audios = Audio.objects.order_by('precio')
-    context = { 'lista_audios' : audios}
-    return render (request, 'audios.html', context)
+    def get_context_data(self, **kwargs):
+        context = super(AudioListView, self).get_context_data(**kwargs)
+        context['titulo_pagina'] = 'Audios'
+        return context
 
-# Devuelve los datos de un telefono por ID
-def telefono(request):
-    telefono = Telefono.objects.get(pk = telefono_id)
-    return HttpResponse(telefono)
+class TelefonoListView(ListView):
+    model = Telefono
+    template_name = 'telefonos.html'
+    queryset = Telefono.objects.order_by('precio')
+    context_object_name = 'lista_telefonos'
 
-# Devuelve la lista de telefonos
-def telefonos(request):
-    telefonos = Telefono.objects.order_by('precio')
-    context = { 'lista_telefonos' : telefonos}
-    return render (request, 'telefonos.html', context)
+    def get_context_data(self, **kwargs):
+        context = super(TelefonoListView, self).get_context_data(**kwargs)
+        context['titulo_pagina'] = 'Telefonos'
+        return context
+
+
+class OrdenadorDetailView(DetailView):
+    model = Ordenador
+    template_name = 'DetalleOrdenador.html'
+
+
+class AudioDetailView(DetailView):
+    model = Audio
+    template_name = 'DetalleAudio.html'
+
+class TelefonoDetailView(DetailView):
+    model = Telefono
+    template_name = 'DetalleTelefono.html'
 
 def tipo_producto(request):
     ordenadores = Ordenador.objects.order_by('precio')
