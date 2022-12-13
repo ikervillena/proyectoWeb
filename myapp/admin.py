@@ -14,8 +14,9 @@ admin.site.site_header = 'Admin Tienda IM Componentes'
 #Agruparlo y ponerle titulos
 class OrdenadorAdmin(admin.ModelAdmin):
     fieldsets = [
-        ('Datos Generales', {'fields': ['nombre', 'descripcion', 'precio', 'imagen']}),
+        ('Datos Generales', {'fields': ['nombre', 'descripcion', 'precio']}),
         ('Otros datos', {'fields': ['proces', 'sistemaDeAudio', 'memoria']}),
+        ('Fotos',{'fields':['imagen1','imagen2','imagen3']}),
     ]
 
     list_display= ('nombre', 'descripcion', 'precio')
@@ -27,8 +28,9 @@ admin.site.register(Ordenador, OrdenadorAdmin)
 #Agruparlo y ponerle titulos
 class TelefonoAdmin(admin.ModelAdmin):
     fieldsets = [
-        ('Datos Generales', {'fields': ['nombre', 'descripcion', 'precio', 'imagen']}),
+        ('Datos Generales', {'fields': ['nombre', 'descripcion', 'precio']}),
         ('Otros datos', {'fields': ['acabado', 'capacidad', 'pantalla']}),
+        ('Fotos',{'fields':['imagen1','imagen2','imagen3']}),
     ]
     list_display= ('nombre', 'descripcion', 'precio')
     search_fields=['descripcion', 'nombre']
@@ -39,8 +41,9 @@ admin.site.register(Telefono, TelefonoAdmin)
 
 class AudioAdmin(admin.ModelAdmin):
     fieldsets = [
-        ('Datos Generales', {'fields': ['nombre', 'descripcion', 'precio', 'imagen']}),
+        ('Datos Generales', {'fields': ['nombre', 'descripcion', 'precio']}),
         ('Otros datos', {'fields': ['numeroWoofer', 'diametroWoofer']}),
+        ('Fotos',{'fields':['imagen1','imagen2','imagen3']}),
     ]
     list_display= ('nombre', 'descripcion', 'precio')
     search_fields=['descripcion', 'nombre']

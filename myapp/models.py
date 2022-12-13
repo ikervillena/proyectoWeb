@@ -7,7 +7,9 @@ class Producto(PolymorphicModel):
     nombre = models.CharField(max_length=40, default='producto')
     descripcion = models.TextField(default = 'descripcion')
     precio = models.FloatField(default = 0)
-    imagen = models.ImageField(default = None)
+    imagen1 = models.ImageField(default = None)
+    imagen2= models.ImageField(default = None)
+    imagen3 = models.ImageField(default = None)
 
     def __str__(self):
         return self.nombre

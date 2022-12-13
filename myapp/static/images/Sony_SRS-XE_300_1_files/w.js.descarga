@@ -1,0 +1,3 @@
+whoson_global.checkStatus({
+"online": 0,
+});
