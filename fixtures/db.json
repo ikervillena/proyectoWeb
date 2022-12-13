@@ -1,0 +1,2098 @@
+[
+    {
+      "model": "admin_interface.theme",
+      "pk": 1,
+      "fields": {
+        "name": "IM Componentes",
+        "active": true,
+        "title": "IM Componentes",
+        "title_color": "#F5F5F5",
+        "title_visible": true,
+        "logo": "admin-interface/logo/IMLogo_5ykAYTl.png",
+        "logo_color": "#FFFFFF",
+        "logo_max_width": 400,
+        "logo_max_height": 100,
+        "logo_visible": true,
+        "favicon": "admin-interface/favicon/Capturadepantalla2022-11-09104829_f1ADE8l.png",
+        "env_name": "",
+        "env_color": "#C9F0DD",
+        "env_visible_in_header": true,
+        "env_visible_in_favicon": true,
+        "language_chooser_active": true,
+        "language_chooser_control": "default-select",
+        "language_chooser_display": "code",
+        "css_header_background_color": "#3E3E3E",
+        "css_header_text_color": "#59A7E1",
+        "css_header_link_color": "#FFFFFF",
+        "css_header_link_hover_color": "#C9F0DD",
+        "css_module_background_color": "#59A7E1",
+        "css_module_background_selected_color": "#C9F0DD",
+        "css_module_text_color": "#FFFFFF",
+        "css_module_link_color": "#FFFFFF",
+        "css_module_link_selected_color": "#FFFFFF",
+        "css_module_link_hover_color": "#C9F0DD",
+        "css_module_rounded_corners": true,
+        "css_generic_link_color": "#3E3E3E",
+        "css_generic_link_hover_color": "#59A7E1",
+        "css_save_button_background_color": "#3E3E3E",
+        "css_save_button_background_hover_color": "#9F9F9F",
+        "css_save_button_text_color": "#FFFFFF",
+        "css_delete_button_background_color": "#BA2121",
+        "css_delete_button_background_hover_color": "#A41515",
+        "css_delete_button_text_color": "#FFFFFF",
+        "related_modal_active": true,
+        "related_modal_background_color": "#000000",
+        "related_modal_background_opacity": "0.3",
+        "related_modal_rounded_corners": true,
+        "related_modal_close_button_visible": true,
+        "list_filter_highlight": true,
+        "list_filter_dropdown": true,
+        "list_filter_sticky": true,
+        "list_filter_removal_links": false,
+        "foldable_apps": true,
+        "show_fieldsets_as_tabs": false,
+        "show_inlines_as_tabs": false,
+        "recent_actions_visible": true,
+        "form_submit_sticky": false,
+        "form_pagination_sticky": false
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 1,
+      "fields": {
+        "action_time": "2022-11-16T10:24:57.288Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "Sony SRS-XE 300",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 2,
+      "fields": {
+        "action_time": "2022-11-16T10:26:10.824Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "MacBook Air",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 3,
+      "fields": {
+        "action_time": "2022-11-16T10:28:22.960Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Iphone 14 Pro",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 4,
+      "fields": {
+        "action_time": "2022-11-20T10:38:06.886Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "Sony SRS-XE 300",
+        "action_flag": 2,
+        "change_message": "[]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 5,
+      "fields": {
+        "action_time": "2022-11-20T11:24:33.674Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "Sony SRS-XE 300",
+        "action_flag": 2,
+        "change_message": "[]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 6,
+      "fields": {
+        "action_time": "2022-11-20T17:47:19.302Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Iphone 14 Pro",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 7,
+      "fields": {
+        "action_time": "2022-11-20T17:51:59.634Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Iphone 14 Pro",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 8,
+      "fields": {
+        "action_time": "2022-11-20T17:53:39.473Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Iphone 14 Pro",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 9,
+      "fields": {
+        "action_time": "2022-11-20T17:56:41.289Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "Sony SRS-XE 300",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 10,
+      "fields": {
+        "action_time": "2022-11-20T17:59:22.055Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "Wonderboom 3",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 11,
+      "fields": {
+        "action_time": "2022-11-20T18:05:48.842Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "5",
+        "object_repr": "Beat Solo 3",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 12,
+      "fields": {
+        "action_time": "2022-11-20T18:08:57.178Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "6",
+        "object_repr": "OnePlus 10T",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 13,
+      "fields": {
+        "action_time": "2022-11-20T18:09:50.639Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "6",
+        "object_repr": "OnePlus 10T",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 14,
+      "fields": {
+        "action_time": "2022-11-20T18:17:58.248Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "7",
+        "object_repr": "Xiaomi 12T Pro",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 15,
+      "fields": {
+        "action_time": "2022-11-20T18:24:33.304Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "8",
+        "object_repr": "IdeaPad 5 Gen 7",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 16,
+      "fields": {
+        "action_time": "2022-11-20T18:26:42.239Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "MacBook Air",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 17,
+      "fields": {
+        "action_time": "2022-11-20T18:31:55.527Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "9",
+        "object_repr": "Port�til HP EliteBook 850 G8",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 18,
+      "fields": {
+        "action_time": "2022-11-21T09:47:51.567Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "10",
+        "object_repr": "asdfa",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 19,
+      "fields": {
+        "action_time": "2022-11-21T09:48:27.127Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "10",
+        "object_repr": "asdfa",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 20,
+      "fields": {
+        "action_time": "2022-11-23T10:38:44.756Z",
+        "user": 2,
+        "content_type": 8,
+        "object_id": "5",
+        "object_repr": "Beat Solo 3",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"NumeroWoofer\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 21,
+      "fields": {
+        "action_time": "2022-11-23T10:39:44.497Z",
+        "user": 2,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "Wonderboom 3",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"NumeroWoofer\", \"DiametroWoofer\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 22,
+      "fields": {
+        "action_time": "2022-11-23T10:40:55.655Z",
+        "user": 2,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "Sony SRS-XE 300",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"NumeroWoofer\", \"DiametroWoofer\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 23,
+      "fields": {
+        "action_time": "2022-11-23T10:51:16.603Z",
+        "user": 2,
+        "content_type": 9,
+        "object_id": "9",
+        "object_repr": "Port�til HP EliteBook 850 G8",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Proces\", \"Memoria\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 24,
+      "fields": {
+        "action_time": "2022-11-23T10:55:15.000Z",
+        "user": 2,
+        "content_type": 9,
+        "object_id": "9",
+        "object_repr": "Port�til HP EliteBook 850 G8",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"SistemaDeAudio\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 25,
+      "fields": {
+        "action_time": "2022-11-23T10:58:22.055Z",
+        "user": 2,
+        "content_type": 9,
+        "object_id": "8",
+        "object_repr": "Lenovo IdeaPad 5 Gen 7",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Nombre\", \"Proces\", \"SistemaDeAudio\", \"Memoria\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 26,
+      "fields": {
+        "action_time": "2022-11-23T10:59:46.256Z",
+        "user": 2,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "MacBook Air",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Proces\", \"SistemaDeAudio\", \"Memoria\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 27,
+      "fields": {
+        "action_time": "2022-11-23T11:00:51.745Z",
+        "user": 2,
+        "content_type": 10,
+        "object_id": "7",
+        "object_repr": "Xiaomi 12T Pro",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Acabado\", \"Capacidad\", \"Pantalla\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 28,
+      "fields": {
+        "action_time": "2022-11-23T16:14:07.318Z",
+        "user": 2,
+        "content_type": 8,
+        "object_id": "5",
+        "object_repr": "Beat Solo 3",
+        "action_flag": 2,
+        "change_message": "[]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 29,
+      "fields": {
+        "action_time": "2022-11-23T16:14:11.463Z",
+        "user": 2,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "Wonderboom 3",
+        "action_flag": 2,
+        "change_message": "[]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 30,
+      "fields": {
+        "action_time": "2022-11-23T16:14:22.527Z",
+        "user": 2,
+        "content_type": 9,
+        "object_id": "9",
+        "object_repr": "Port�til HP EliteBook 850 G8",
+        "action_flag": 2,
+        "change_message": "[]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 31,
+      "fields": {
+        "action_time": "2022-11-24T16:31:03.264Z",
+        "user": 2,
+        "content_type": 11,
+        "object_id": "3",
+        "object_repr": "Maria Santizo",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 32,
+      "fields": {
+        "action_time": "2022-12-09T16:28:20.277Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Logo\", \"Favicon\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 33,
+      "fields": {
+        "action_time": "2022-12-09T16:28:55.725Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Logo\", \"Favicon\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 34,
+      "fields": {
+        "action_time": "2022-12-09T16:29:36.139Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 35,
+      "fields": {
+        "action_time": "2022-12-09T16:29:59.423Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 36,
+      "fields": {
+        "action_time": "2022-12-09T16:30:25.784Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Background color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 37,
+      "fields": {
+        "action_time": "2022-12-09T16:32:16.349Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 38,
+      "fields": {
+        "action_time": "2022-12-09T16:32:27.789Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Background color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 39,
+      "fields": {
+        "action_time": "2022-12-09T16:33:37.892Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Background color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 40,
+      "fields": {
+        "action_time": "2022-12-09T16:33:46.835Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Background color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 41,
+      "fields": {
+        "action_time": "2022-12-09T16:33:58.883Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Background color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 42,
+      "fields": {
+        "action_time": "2022-12-09T16:34:07.699Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Background color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 43,
+      "fields": {
+        "action_time": "2022-12-09T16:34:18.378Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 44,
+      "fields": {
+        "action_time": "2022-12-09T16:34:53.497Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Text color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 45,
+      "fields": {
+        "action_time": "2022-12-09T16:35:23.994Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 46,
+      "fields": {
+        "action_time": "2022-12-09T16:35:33.279Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 47,
+      "fields": {
+        "action_time": "2022-12-09T16:35:57.747Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Background color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 48,
+      "fields": {
+        "action_time": "2022-12-09T16:36:19.766Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Text color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 49,
+      "fields": {
+        "action_time": "2022-12-09T16:36:34.392Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Background color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 50,
+      "fields": {
+        "action_time": "2022-12-09T16:36:49.423Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Background selected color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 51,
+      "fields": {
+        "action_time": "2022-12-09T16:37:53.579Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Background color\", \"Background hover color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 52,
+      "fields": {
+        "action_time": "2022-12-09T16:38:20.320Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Background hover color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 53,
+      "fields": {
+        "action_time": "2022-12-09T16:38:39.521Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Link color\", \"Link hover color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 54,
+      "fields": {
+        "action_time": "2022-12-09T16:39:07.303Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Foldable apps\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 55,
+      "fields": {
+        "action_time": "2022-12-09T16:40:02.623Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Foldable apps\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 56,
+      "fields": {
+        "action_time": "2022-12-09T16:41:08.130Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 57,
+      "fields": {
+        "action_time": "2022-12-09T16:41:47.520Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Logo\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 58,
+      "fields": {
+        "action_time": "2022-12-09T16:42:10.955Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Logo\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 59,
+      "fields": {
+        "action_time": "2022-12-09T16:43:07.787Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Logo\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 60,
+      "fields": {
+        "action_time": "2022-12-09T16:44:31.660Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Logo\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 61,
+      "fields": {
+        "action_time": "2022-12-09T16:45:54.822Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Logo\", \"Title\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 62,
+      "fields": {
+        "action_time": "2022-12-09T16:48:55.966Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Rounded corners\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 63,
+      "fields": {
+        "action_time": "2022-12-09T16:49:06.919Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Rounded corners\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 64,
+      "fields": {
+        "action_time": "2022-12-09T16:52:20.277Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Link hover color\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 65,
+      "fields": {
+        "action_time": "2022-12-09T17:06:17.156Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Logo\", \"Favicon\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 66,
+      "fields": {
+        "action_time": "2022-12-09T17:08:02.205Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Logo\", \"Favicon\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 67,
+      "fields": {
+        "action_time": "2022-12-09T17:10:25.659Z",
+        "user": 2,
+        "content_type": 4,
+        "object_id": "3",
+        "object_repr": "UsuarioNormal",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 68,
+      "fields": {
+        "action_time": "2022-12-09T17:14:19.239Z",
+        "user": 2,
+        "content_type": 4,
+        "object_id": "3",
+        "object_repr": "UsuarioNormal",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"Staff status\", \"User permissions\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 69,
+      "fields": {
+        "action_time": "2022-12-09T17:15:37.096Z",
+        "user": 2,
+        "content_type": 4,
+        "object_id": "2",
+        "object_repr": "admin",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 70,
+      "fields": {
+        "action_time": "2022-12-09T17:15:54.442Z",
+        "user": 2,
+        "content_type": 4,
+        "object_id": "1",
+        "object_repr": "mariaaramburugarcia",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 71,
+      "fields": {
+        "action_time": "2022-12-09T17:16:51.585Z",
+        "user": 2,
+        "content_type": 4,
+        "object_id": "4",
+        "object_repr": "Becario",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 72,
+      "fields": {
+        "action_time": "2022-12-09T17:17:40.368Z",
+        "user": 2,
+        "content_type": 4,
+        "object_id": "4",
+        "object_repr": "Becario",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Email address\", \"User permissions\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 73,
+      "fields": {
+        "action_time": "2022-12-09T17:17:55.193Z",
+        "user": 2,
+        "content_type": 4,
+        "object_id": "4",
+        "object_repr": "Becario",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 74,
+      "fields": {
+        "action_time": "2022-12-09T17:18:12.780Z",
+        "user": 2,
+        "content_type": 4,
+        "object_id": "3",
+        "object_repr": "UsuarioNormal",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 75,
+      "fields": {
+        "action_time": "2022-12-09T17:18:31.002Z",
+        "user": 2,
+        "content_type": 4,
+        "object_id": "2",
+        "object_repr": "admin",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Last name\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 76,
+      "fields": {
+        "action_time": "2022-12-09T17:18:42.663Z",
+        "user": 2,
+        "content_type": 4,
+        "object_id": "1",
+        "object_repr": "mariaaramburugarcia",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 77,
+      "fields": {
+        "action_time": "2022-12-09T17:18:55.595Z",
+        "user": 2,
+        "content_type": 4,
+        "object_id": "3",
+        "object_repr": "UsuarioNormal",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 78,
+      "fields": {
+        "action_time": "2022-12-09T17:19:04.192Z",
+        "user": 2,
+        "content_type": 4,
+        "object_id": "4",
+        "object_repr": "Becario",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Last name\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 79,
+      "fields": {
+        "action_time": "2022-12-09T17:19:33.518Z",
+        "user": 2,
+        "content_type": 4,
+        "object_id": "1",
+        "object_repr": "mariaaramburugarcia",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 80,
+      "fields": {
+        "action_time": "2022-12-09T17:21:49.582Z",
+        "user": 2,
+        "content_type": 4,
+        "object_id": "2",
+        "object_repr": "admin",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 81,
+      "fields": {
+        "action_time": "2022-12-09T17:21:56.884Z",
+        "user": 2,
+        "content_type": 4,
+        "object_id": "1",
+        "object_repr": "mariaaramburugarcia",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 82,
+      "fields": {
+        "action_time": "2022-12-12T10:30:50.378Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Logo\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 83,
+      "fields": {
+        "action_time": "2022-12-12T10:31:00.569Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "2",
+        "object_repr": "Django",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 84,
+      "fields": {
+        "action_time": "2022-12-12T10:31:19.114Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "2",
+        "object_repr": "Django",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 85,
+      "fields": {
+        "action_time": "2022-12-12T10:31:30.322Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "IM Componentes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Logo\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 86,
+      "fields": {
+        "action_time": "2022-12-12T17:27:56.057Z",
+        "user": 2,
+        "content_type": 8,
+        "object_id": "5",
+        "object_repr": "Beat Solo 3",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 87,
+      "fields": {
+        "action_time": "2022-12-12T17:27:56.074Z",
+        "user": 2,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "Wonderboom 3",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 88,
+      "fields": {
+        "action_time": "2022-12-12T17:27:56.082Z",
+        "user": 2,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "Sony SRS-XE 300",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 89,
+      "fields": {
+        "action_time": "2022-12-12T17:28:02.747Z",
+        "user": 2,
+        "content_type": 9,
+        "object_id": "9",
+        "object_repr": "Port�til HP EliteBook 850 G8",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 90,
+      "fields": {
+        "action_time": "2022-12-12T17:28:02.754Z",
+        "user": 2,
+        "content_type": 9,
+        "object_id": "8",
+        "object_repr": "Lenovo IdeaPad 5 Gen 7",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 91,
+      "fields": {
+        "action_time": "2022-12-12T17:28:02.762Z",
+        "user": 2,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "MacBook Air",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 92,
+      "fields": {
+        "action_time": "2022-12-12T17:28:25.569Z",
+        "user": 2,
+        "content_type": 10,
+        "object_id": "7",
+        "object_repr": "Xiaomi 12T Pro",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 93,
+      "fields": {
+        "action_time": "2022-12-12T17:28:25.577Z",
+        "user": 2,
+        "content_type": 10,
+        "object_id": "6",
+        "object_repr": "OnePlus 10T",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 94,
+      "fields": {
+        "action_time": "2022-12-12T17:28:25.584Z",
+        "user": 2,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Iphone 14 Pro",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 95,
+      "fields": {
+        "action_time": "2022-12-12T17:51:58.321Z",
+        "user": 2,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "Beat Solo 3",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 96,
+      "fields": {
+        "action_time": "2022-12-13T09:14:02.792Z",
+        "user": 2,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "Beat Solo 3",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Precio\"]}}]"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 1,
+      "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 2,
+      "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 3,
+      "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 4,
+      "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 5,
+      "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 6,
+      "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 7,
+      "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 8,
+      "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 9,
+      "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 10,
+      "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 11,
+      "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 12,
+      "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 13,
+      "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 14,
+      "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 15,
+      "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 16,
+      "fields": {
+        "name": "Can view user",
+        "content_type": 4,
+        "codename": "view_user"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 17,
+      "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 18,
+      "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 19,
+      "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 20,
+      "fields": {
+        "name": "Can view content type",
+        "content_type": 5,
+        "codename": "view_contenttype"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 21,
+      "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 22,
+      "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 23,
+      "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 24,
+      "fields": {
+        "name": "Can view session",
+        "content_type": 6,
+        "codename": "view_session"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 25,
+      "fields": {
+        "name": "Can add producto",
+        "content_type": 7,
+        "codename": "add_producto"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 26,
+      "fields": {
+        "name": "Can change producto",
+        "content_type": 7,
+        "codename": "change_producto"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 27,
+      "fields": {
+        "name": "Can delete producto",
+        "content_type": 7,
+        "codename": "delete_producto"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 28,
+      "fields": {
+        "name": "Can view producto",
+        "content_type": 7,
+        "codename": "view_producto"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 29,
+      "fields": {
+        "name": "Can add audio",
+        "content_type": 8,
+        "codename": "add_audio"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 30,
+      "fields": {
+        "name": "Can change audio",
+        "content_type": 8,
+        "codename": "change_audio"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 31,
+      "fields": {
+        "name": "Can delete audio",
+        "content_type": 8,
+        "codename": "delete_audio"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 32,
+      "fields": {
+        "name": "Can view audio",
+        "content_type": 8,
+        "codename": "view_audio"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 33,
+      "fields": {
+        "name": "Can add ordenador",
+        "content_type": 9,
+        "codename": "add_ordenador"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 34,
+      "fields": {
+        "name": "Can change ordenador",
+        "content_type": 9,
+        "codename": "change_ordenador"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 35,
+      "fields": {
+        "name": "Can delete ordenador",
+        "content_type": 9,
+        "codename": "delete_ordenador"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 36,
+      "fields": {
+        "name": "Can view ordenador",
+        "content_type": 9,
+        "codename": "view_ordenador"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 37,
+      "fields": {
+        "name": "Can add telefono",
+        "content_type": 10,
+        "codename": "add_telefono"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 38,
+      "fields": {
+        "name": "Can change telefono",
+        "content_type": 10,
+        "codename": "change_telefono"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 39,
+      "fields": {
+        "name": "Can delete telefono",
+        "content_type": 10,
+        "codename": "delete_telefono"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 40,
+      "fields": {
+        "name": "Can view telefono",
+        "content_type": 10,
+        "codename": "view_telefono"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 41,
+      "fields": {
+        "name": "Can add cliente",
+        "content_type": 11,
+        "codename": "add_cliente"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 42,
+      "fields": {
+        "name": "Can change cliente",
+        "content_type": 11,
+        "codename": "change_cliente"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 43,
+      "fields": {
+        "name": "Can delete cliente",
+        "content_type": 11,
+        "codename": "delete_cliente"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 44,
+      "fields": {
+        "name": "Can view cliente",
+        "content_type": 11,
+        "codename": "view_cliente"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 45,
+      "fields": {
+        "name": "Can add Theme",
+        "content_type": 12,
+        "codename": "add_theme"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 46,
+      "fields": {
+        "name": "Can change Theme",
+        "content_type": 12,
+        "codename": "change_theme"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 47,
+      "fields": {
+        "name": "Can delete Theme",
+        "content_type": 12,
+        "codename": "delete_theme"
+      }
+    },
+    {
+      "model": "auth.permission",
+      "pk": 48,
+      "fields": {
+        "name": "Can view Theme",
+        "content_type": 12,
+        "codename": "view_theme"
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 1,
+      "fields": {
+        "password": "pbkdf2_sha256$390000$zpHy3yHUO2Jseya3jz8oyX$eVj8mcQZSKTLxIgL79k48hHhHft+jntLwV7k/RG5kUw=",
+        "last_login": "2022-11-16T10:21:46Z",
+        "is_superuser": true,
+        "username": "mariaaramburugarcia",
+        "first_name": "Admin",
+        "last_name": "admin2",
+        "email": "maria.aramburu@opendeusto.es",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-11-16T10:20:22Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 2,
+      "fields": {
+        "password": "pbkdf2_sha256$390000$HACaIZzexElzYyvvxA8Cc3$slxG4mJ7n75WZRRHe9C9DrOcAjEmY/P/f+ij9lqCknA=",
+        "last_login": "2022-12-13T17:56:34.254Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "Admin",
+        "last_name": "admin1",
+        "email": "marinaojinaga@opendeusto.es",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-11-22T17:45:01Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 3,
+      "fields": {
+        "password": "pbkdf2_sha256$390000$XZdbmQo8WDmWtMQY7biMvO$inuvic7735hFsrptyIyCJbHr3oeHJ9IqXJ3OGVyjPY8=",
+        "last_login": "2022-12-09T17:20:02.782Z",
+        "is_superuser": false,
+        "username": "UsuarioNormal",
+        "first_name": "Usuario",
+        "last_name": "trabajador1",
+        "email": "usunormal@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-12-09T17:10:25Z",
+        "groups": [],
+        "user_permissions": [
+          4,
+          12,
+          16,
+          20,
+          29,
+          30,
+          31,
+          32,
+          41,
+          42,
+          43,
+          44,
+          33,
+          34,
+          35,
+          36,
+          25,
+          26,
+          27,
+          28,
+          37,
+          38,
+          39,
+          40,
+          24
+        ]
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 4,
+      "fields": {
+        "password": "pbkdf2_sha256$390000$d1KXYNCzo9Mh31xG5SgMcL$MJDYVQi31BeNS2dTdw1mHaPbh2nJFaToUyeIQ7MT+FM=",
+        "last_login": "2022-12-12T10:52:17.857Z",
+        "is_superuser": false,
+        "username": "Becario",
+        "first_name": "Becario",
+        "last_name": "becario1",
+        "email": "becario@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-12-09T17:16:51Z",
+        "groups": [],
+        "user_permissions": [
+          4,
+          16,
+          20,
+          32,
+          44,
+          36,
+          28,
+          40
+        ]
+      }
+    },
+    {
+      "model": "contenttypes.contenttype",
+      "pk": 1,
+      "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+      }
+    },
+    {
+      "model": "contenttypes.contenttype",
+      "pk": 2,
+      "fields": {
+        "app_label": "auth",
+        "model": "permission"
+      }
+    },
+    {
+      "model": "contenttypes.contenttype",
+      "pk": 3,
+      "fields": {
+        "app_label": "auth",
+        "model": "group"
+      }
+    },
+    {
+      "model": "contenttypes.contenttype",
+      "pk": 4,
+      "fields": {
+        "app_label": "auth",
+        "model": "user"
+      }
+    },
+    {
+      "model": "contenttypes.contenttype",
+      "pk": 5,
+      "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+      }
+    },
+    {
+      "model": "contenttypes.contenttype",
+      "pk": 6,
+      "fields": {
+        "app_label": "sessions",
+        "model": "session"
+      }
+    },
+    {
+      "model": "contenttypes.contenttype",
+      "pk": 7,
+      "fields": {
+        "app_label": "myapp",
+        "model": "producto"
+      }
+    },
+    {
+      "model": "contenttypes.contenttype",
+      "pk": 8,
+      "fields": {
+        "app_label": "myapp",
+        "model": "audio"
+      }
+    },
+    {
+      "model": "contenttypes.contenttype",
+      "pk": 9,
+      "fields": {
+        "app_label": "myapp",
+        "model": "ordenador"
+      }
+    },
+    {
+      "model": "contenttypes.contenttype",
+      "pk": 10,
+      "fields": {
+        "app_label": "myapp",
+        "model": "telefono"
+      }
+    },
+    {
+      "model": "contenttypes.contenttype",
+      "pk": 11,
+      "fields": {
+        "app_label": "myapp",
+        "model": "cliente"
+      }
+    },
+    {
+      "model": "contenttypes.contenttype",
+      "pk": 12,
+      "fields": {
+        "app_label": "admin_interface",
+        "model": "theme"
+      }
+    },
+    {
+      "model": "sessions.session",
+      "pk": "9oymz1o1qgyl3x7pqydhlicsl8fmon1v",
+      "fields": {
+        "session_data": ".eJxVjMsOwiAURP-FtSHleS8u3fsNhAtUqgaS0q6M_64kXehuMufMvJgP-1b83vPql8TOTLDTb0chPnIdIN1DvTUeW93WhfhQ-EE7v7aUn5fD_TsooZfvOlvQVkuarJAJCaPSWkcngjXaWMA0AQplxQggjIwuEqGbIQAqMyN7fwCokjZw:1ox44Y:xWxChtAt-I9jyiXgwdYmYpEupptbvXMbY7lWuhmAVWA",
+        "expire_date": "2022-12-05T10:30:42.253Z"
+      }
+    },
+    {
+      "model": "sessions.session",
+      "pk": "cdz59ecc5la1x812zkmeapqtsxxwso1c",
+      "fields": {
+        "session_data": ".eJxVjEEOwiAURO_C2hBgEIpL956h-fC_UjVtUtqV8e7apAvdzntvXqqndan92mTuB1Yn5dThd8tUHjJugO803iZdpnGZh6w3Re-06cvE8jzv7t9BpVa_NdG148A2ObE4mgSQB1AkWDAQwVE6B29CyMIpkUQKYpg9e8cZ6v0B1sg3yw:1p4mNa:rL_Y511KY0e943Ymuh67Sn6Sj97nw6TYWvzGUwMLs6k",
+        "expire_date": "2022-12-26T17:14:14.493Z"
+      }
+    },
+    {
+      "model": "sessions.session",
+      "pk": "er1w57va3tky4lh69tqdqw66rgou35tt",
+      "fields": {
+        "session_data": ".eJxVjEEOwiAURO_C2hBgEIpL956h-fC_UjVtUtqV8e7apAvdzntvXqqndan92mTuB1Yn5dThd8tUHjJugO803iZdpnGZh6w3Re-06cvE8jzv7t9BpVa_NdG148A2ObE4mgSQB1AkWDAQwVE6B29CyMIpkUQKYpg9e8cZ6v0B1sg3yw:1oyF0o:7qdU5fapyOfViJ8Ph8vXc0FWf53ZA-rzrWh3_YqyjY0",
+        "expire_date": "2022-12-08T16:23:42.252Z"
+      }
+    },
+    {
+      "model": "sessions.session",
+      "pk": "fc5vhyypy15m4mdyd0mu0mwyedbgxjuh",
+      "fields": {
+        "session_data": ".eJxVjEEOwiAURO_C2hBgEIpL956h-fC_UjVtUtqV8e7apAvdzntvXqqndan92mTuB1Yn5dThd8tUHjJugO803iZdpnGZh6w3Re-06cvE8jzv7t9BpVa_NdG148A2ObE4mgSQB1AkWDAQwVE6B29CyMIpkUQKYpg9e8cZ6v0B1sg3yw:1p3cAa:m3-QbXLLrizLXIwZk3yrj369e-AN3wBdKzIBF-bIR7g",
+        "expire_date": "2022-12-23T12:08:00.728Z"
+      }
+    },
+    {
+      "model": "sessions.session",
+      "pk": "npovw3l7r502vgxw5qskjna0vuoq3f7q",
+      "fields": {
+        "session_data": ".eJxVjEEOwiAURO_C2hBgEIpL956h-fC_UjVtUtqV8e7apAvdzntvXqqndan92mTuB1Yn5dThd8tUHjJugO803iZdpnGZh6w3Re-06cvE8jzv7t9BpVa_NdG148A2ObE4mgSQB1AkWDAQwVE6B29CyMIpkUQKYpg9e8cZ6v0B1sg3yw:1p59W6:Buh4oii885UDwEvcKHNKOEtj7eQUkeMSyo6VPM9qSHc",
+        "expire_date": "2022-12-27T17:56:34.264Z"
+      }
+    },
+    {
+      "model": "sessions.session",
+      "pk": "olyovpq3qlk392nsateftp149vkpit1j",
+      "fields": {
+        "session_data": ".eJxVjEEOwiAURO_C2hBgEIpL956h-fC_UjVtUtqV8e7apAvdzntvXqqndan92mTuB1Yn5dThd8tUHjJugO803iZdpnGZh6w3Re-06cvE8jzv7t9BpVa_NdG148A2ObE4mgSQB1AkWDAQwVE6B29CyMIpkUQKYpg9e8cZ6v0B1sg3yw:1oxXKr:sAyNpOOGyQnk5sDWIKB8VjjJFk3xVW3Y87Vh6Fbnigk",
+        "expire_date": "2022-12-06T17:45:29.891Z"
+      }
+    },
+    {
+      "model": "sessions.session",
+      "pk": "qbxiw9tve6aaznqx0jn7znnmb0ykkbfm",
+      "fields": {
+        "session_data": ".eJxVjEEOwiAURO_C2hBgEIpL956h-fC_UjVtUtqV8e7apAvdzntvXqqndan92mTuB1Yn5dThd8tUHjJugO803iZdpnGZh6w3Re-06cvE8jzv7t9BpVa_NdG148A2ObE4mgSQB1AkWDAQwVE6B29CyMIpkUQKYpg9e8cZ6v0B1sg3yw:1p5769:3iKmaMg2BoqR4k0rwW2zl4EOblNC9tWrur3oOca02YI",
+        "expire_date": "2022-12-27T15:21:37.034Z"
+      }
+    },
+    {
+      "model": "myapp.producto",
+      "pk": 1,
+      "fields": {
+        "polymorphic_ctype": 8,
+        "nombre": "Beat Solo 3",
+        "descripcion": "Los auriculares Beats Solo 3 Wireless te sumergen en un sonido inigualable y rico en matices, dondequiera que vayas.",
+        "precio": 229.95,
+        "imagen1": "SoloBeats1.png",
+        "imagen2": "BeatsSolo2.png",
+        "imagen3": "BeatSolo3.jpg"
+      }
+    },
+    {
+      "model": "myapp.audio",
+      "pk": 1,
+      "fields": {
+        "numeroWoofer": 2,
+        "diametroWoofer": 2.0
+      }
+    },
+    {
+      "model": "myapp.cliente",
+      "pk": 1,
+      "fields": {
+        "nombre": "Marina",
+        "usuario": "marinaojinaga",
+        "contrasenya": "1234",
+        "email": "marinaojinaga@opendeusto.es",
+        "productos_guardados": []
+      }
+    },
+    {
+      "model": "myapp.cliente",
+      "pk": 2,
+      "fields": {
+        "nombre": "Malen Sanz",
+        "usuario": "malensanz",
+        "contrasenya": "malensanz",
+        "email": "malensanz@gmail.com",
+        "productos_guardados": []
+      }
+    },
+    {
+      "model": "myapp.cliente",
+      "pk": 4,
+      "fields": {
+        "nombre": "Maria Santizo",
+        "usuario": "mariasantizo",
+        "contrasenya": "mariasantizo",
+        "email": "maria@gmail.com",
+        "productos_guardados": []
+      }
+    },
+    {
+      "model": "myapp.cliente",
+      "pk": 5,
+      "fields": {
+        "nombre": "Ane Garcia",
+        "usuario": "anegarcia",
+        "contrasenya": "ane1234",
+        "email": "ane@gmail.com",
+        "productos_guardados": []
+      }
+    },
+    {
+      "model": "myapp.cliente",
+      "pk": 6,
+      "fields": {
+        "nombre": "Asier Olaizola",
+        "usuario": "asier",
+        "contrasenya": "asier",
+        "email": "asier@gmail.com",
+        "productos_guardados": []
+      }
+    },
+    {
+      "model": "myapp.cliente",
+      "pk": 7,
+      "fields": {
+        "nombre": "ainhoa",
+        "usuario": "ainhoa",
+        "contrasenya": "ainhoa",
+        "email": "ainhoa@gmail.com",
+        "productos_guardados": []
+      }
+    },
+    {
+      "model": "myapp.cliente",
+      "pk": 8,
+      "fields": {
+        "nombre": "Andres",
+        "usuario": "andres",
+        "contrasenya": "1234",
+        "email": "andres@gmail.com",
+        "productos_guardados": []
+      }
+    }
+    ]
+    
