@@ -27,9 +27,13 @@ def post_inicioSesion_form(request):
         except Cliente.DoesNotExist:
             form = UsuarioForm()
             return render(request, 'inicioSesion_form.html', {'form': form})
-           
+        
+        #Comprueba contrasenya
         if cliente.contrasenya==contrasenya_inicioSesion:
-            return render(request, 'DetalleCliente.html', {'cliente': cliente, })
+            return render(request, 'DetalleCliente.html', {'cliente': cliente})
+        else:
+            form = UsuarioForm()
+            return render(request, 'inicioSesion_form.html', {'form': form})
 
 def show_registro_form(request):
     form = ClienteForm()
