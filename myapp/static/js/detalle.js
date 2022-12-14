@@ -29,31 +29,31 @@ function showSlides(n) {
 
 
 //Efectos carrito y favoritos
+
 const mover = {
   transform: 'translateY(-100em)'
 }
 
 const timing = {
   duration: 2000,
-  iteration: 1,
+  iteration: Infinity,
 }
 
 //Carrito
-var a = document.getElementById('carrito');
-a.addEventListener("click", carrito)
-
 function carrito(){
-  document.getElementById('imgcarrito').style.width= '2.5%';
-  document.getElementById('imgcarrito').style.height= '4%';
+  document.getElementById('imgcarrito').style.visibility='visible';
   document.getElementById('imgcarrito').animate(mover,timing);
 }
 
-//Favorito
-var b = document.getElementById('favorito');
-b.addEventListener("click", fav)
+var a = document.getElementById('carrito');
+a.addEventListener("click", carrito);
 
+//Favorito
 function fav(){
-  document.getElementById('imgfav').style.width= '2.5%';
-  document.getElementById('imgfav').style.height= '4%';
+  document.getElementById('imgfav').style.visibility='visible';
   document.getElementById('imgfav').animate(mover,timing);
 }
+
+var b = document.getElementById('favorito');
+b.addEventListener("click", fav);
+
