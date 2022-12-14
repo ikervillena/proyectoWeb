@@ -1,4 +1,15 @@
+#imgcarrito{
+  width: 0%;
+  height: 0%;
+  float: right;
+}
 
+#imgfav{
+  width: 0%;
+  height: 0%;
+  float: right;
+
+}
 
 .u-section-1 .u-sheet-1 {
   min-height: 724px;
