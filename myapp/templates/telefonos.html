@@ -11,7 +11,7 @@
       {% for telefono in lista_telefonos %}
       <div class="u-container-style u-list-item u-repeater-item">
         <div class="u-container-layout u-similar-container u-container-layout-4">
-          <img alt="" class="u-expanded-width u-image u-image-default u-image-2" data-image-width="2000" data-image-height="1333" src="{% static '' %}images/{{ telefono.imagen }}">
+          <img alt="" class="u-expanded-width u-image u-image-default u-image-2" data-image-width="2000" data-image-height="1333" src="{% static '' %}images/{{ telefono.imagen1 }}">
           <h3 class="u-text u-text-default u-text-7">{{ telefono.nombre }}</h3>
           <p class="u-text u-text-8">{{ telefono.precio }} €</p>
           <a href="{{telefono.pk}}" class="u-active-none u-border-2 u-border-hover-palette-2-base u-border-palette-2-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-4">Saber más</a>
