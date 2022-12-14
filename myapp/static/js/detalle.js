@@ -26,3 +26,34 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+
+//Efectos carrito y favoritos
+
+const mover = {
+  transform: 'translateY(-100em)'
+}
+
+const timing = {
+  duration: 2000,
+  iteration: Infinity,
+}
+
+//Carrito
+function carrito(){
+  document.getElementById('imgcarrito').style.visibility='visible';
+  document.getElementById('imgcarrito').animate(mover,timing);
+}
+
+var a = document.getElementById('carrito');
+a.addEventListener("click", carrito);
+
+//Favorito
+function fav(){
+  document.getElementById('imgfav').style.visibility='visible';
+  document.getElementById('imgfav').animate(mover,timing);
+}
+
+var b = document.getElementById('favorito');
+b.addEventListener("click", fav);
+
