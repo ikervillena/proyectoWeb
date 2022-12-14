@@ -7,8 +7,3 @@ function escribir() {
     mensaje.style.color = 'red';
     document.getElementById('boton-registro').style.color = 'red';
 }
-
-fetch('url')
-.then((response)=>{
-    
-})
