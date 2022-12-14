@@ -28,32 +28,14 @@ function showSlides(n) {
 }
 
 
-//Efectos carrito y favoritos
+//Carrito y favoritos usando notify.js
 
-const mover = {
-  transform: 'translateY(-100em)'
-}
+$("#carrito").click(function () {
+  $.notify("Producto añadido al carrito", "success")
 
-const timing = {
-  duration: 2000,
-  iteration: Infinity,
-}
+});
 
-//Carrito
-function carrito(){
-  document.getElementById('imgcarrito').style.visibility='visible';
-  document.getElementById('imgcarrito').animate(mover,timing);
-}
+$("#favorito").click(function () {
+  $.notify("Producto añadido a favoritos", "success")
 
-var a = document.getElementById('carrito');
-a.addEventListener("click", carrito);
-
-//Favorito
-function fav(){
-  document.getElementById('imgfav').style.visibility='visible';
-  document.getElementById('imgfav').animate(mover,timing);
-}
-
-var b = document.getElementById('favorito');
-b.addEventListener("click", fav);
-
+});
