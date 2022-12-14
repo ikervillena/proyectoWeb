@@ -5,6 +5,8 @@ from django.http import HttpResponse
 from django.views.generic import DetailView, ListView
 from .models import Producto, Ordenador, Audio, Telefono, Cliente
 from django.shortcuts import get_object_or_404
+from django.http import JsonResponse
+import json
 
 # Create your views here.
 
@@ -130,3 +132,9 @@ def detalleAudio(request, audio_id):
     audio = get_object_or_404(Audio, pk=audio_id)
     context = {'audio': audio}
     return render(request, 'DetalleAudio.html', context)
+
+def inicio(request):
+    if request.method == 'POST':
+        usua
+
+
