@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-14 12:25+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\myapp\templates\Inicio.html:17 .\myapp\templates\base.html:58
+#: .\myapp\templates\base.html:71 .\myapp\views.py:70
+msgid "Ordenadores"
+msgstr "Computers"
+
+#: .\myapp\templates\Inicio.html:22
+msgid "Teléfonos"
+msgstr "Phones"
+
+#: .\myapp\templates\Inicio.html:27 .\myapp\views.py:81
+msgid "Audios"
+msgstr "Sound devices"
+
+#: .\myapp\templates\base.html:56 .\myapp\templates\base.html:69
+msgid "Productos"
+msgstr "Products"
+
+#: .\myapp\templates\base.html:57 .\myapp\templates\base.html:70
+msgid "Móviles"
+msgstr "Phones"
+
+#: .\myapp\templates\base.html:59 .\myapp\templates\base.html:72
+msgid "Audio"
+msgstr "Audio"
+
+#: .\myapp\templates\base.html:62 .\myapp\templates\base.html:75
+msgid "Inicio sesión"
+msgstr "Login"
+
+#: .\myapp\templates\base.html:96
+msgid "Los derechos de esta página quedan reservados por IM componentes."
+msgstr "The rights of this website are reserved by IM components."
+
+#: .\myapp\views.py:92
+msgid "Telefonos"
+msgstr "Phones"

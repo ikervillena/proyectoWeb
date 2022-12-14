@@ -5,3 +5,4 @@ Pillow==9.3.0
 sqlparse==0.4.3
 tzdata==2022.6
 django-admin-interface==0.23.0
+python-gettext==4.1

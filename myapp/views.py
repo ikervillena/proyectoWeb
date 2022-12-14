@@ -7,6 +7,7 @@ from .models import Producto, Ordenador, Audio, Telefono, Cliente
 from django.shortcuts import get_object_or_404
 from django.http import JsonResponse
 import json
+from django.utils.translation import gettext as _
 
 # Create your views here.
 
@@ -68,7 +69,7 @@ class OrdenadorListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(OrdenadorListView, self).get_context_data(**kwargs)
-        context['titulo_pagina'] = 'Ordenadores'
+        context['titulo_pagina'] = _('Ordenadores')
         return context
 
 class AudioListView(ListView):
@@ -79,7 +80,7 @@ class AudioListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(AudioListView, self).get_context_data(**kwargs)
-        context['titulo_pagina'] = 'Audios'
+        context['titulo_pagina'] = _('Audios')
         return context
 
 class TelefonoListView(ListView):
@@ -90,7 +91,7 @@ class TelefonoListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(TelefonoListView, self).get_context_data(**kwargs)
-        context['titulo_pagina'] = 'Telefonos'
+        context['titulo_pagina'] = _('Teléfonos')
         return context
 
 
@@ -132,9 +133,4 @@ def detalleAudio(request, audio_id):
     audio = get_object_or_404(Audio, pk=audio_id)
     context = {'audio': audio}
     return render(request, 'DetalleAudio.html', context)
-
-def inicio(request):
-    if request.method == 'POST':
-        usua
-
 

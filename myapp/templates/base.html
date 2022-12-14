@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load i18n %}
 {%load static%}
 <html style="font-size: 16px;" lang="es">
 <head>
@@ -52,26 +53,26 @@
         </a>
       </div>
       <div class="u-custom-menu u-nav-container">
-        <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-2-light-1 u-text-body-alt-color u-text-hover-palette-1-base" style="padding: 10px 20px;">Productos</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2">
-          <li class="u-nav-item"><a href="http://127.0.0.1:8000/telefonos/" class="u-button-style u-nav-link u-white">Móviles</a></li>
-          <li class="u-nav-item"><a href="http://127.0.0.1:8000/ordenadores/" class="u-button-style u-nav-link u-white">Ordenadores</a></li>
-          <li class="u-nav-item"><a href="http://127.0.0.1:8000/audios/" class="u-button-style u-nav-link u-white">Audio</a></li>
+        <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-2-light-1 u-text-body-alt-color u-text-hover-palette-1-base" style="padding: 10px 20px;">{% trans 'Productos' %}</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2">
+          <li class="u-nav-item"><a href="http://127.0.0.1:8000/telefonos/" class="u-button-style u-nav-link u-white">{% trans 'Móviles' %}</a></li>
+          <li class="u-nav-item"><a href="http://127.0.0.1:8000/ordenadores/" class="u-button-style u-nav-link u-white">{% trans 'Ordenadores' %}</a></li>
+          <li class="u-nav-item"><a href="http://127.0.0.1:8000/audios/" class="u-button-style u-nav-link u-white">{% trans 'Audio' %}</a></li>
         </ul>
 </div>
-</li><li class="u-nav-item"><a href="http://127.0.0.1:8000/inicioSesion/" class="u-button-style u-nav-link u-text-active-palette-2-light-1 u-text-body-alt-color u-text-hover-palette-1-base" style="padding: 10px 20px;">Inicio sesión</a>
+</li><li class="u-nav-item"><a href="http://127.0.0.1:8000/inicioSesion/" class="u-button-style u-nav-link u-text-active-palette-2-light-1 u-text-body-alt-color u-text-hover-palette-1-base" style="padding: 10px 20px;">{% trans 'Inicio sesión' %}</a>
 </li></ul>
       </div>
       <div class="u-custom-menu u-nav-container-collapse">
         <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
           <div class="u-sidenav-overflow">
             <div class="u-menu-close"></div>
-            <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link">Productos</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-4">
-              <li class="u-nav-item"><a href="http://127.0.0.1:8000/telefonos/" class="u-button-style u-nav-link">Móviles</a></li>
-              <li class="u-nav-item"><a href="http://127.0.0.1:8000/ordenadores" class="u-button-style u-nav-link">Ordenadores</a></li>
-              <li class="u-nav-item"><a href="http://127.0.0.1:8000/audios" class="u-button-style u-nav-link">Audio</a></li>
+            <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link">{% trans 'Productos' %}</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-4">
+              <li class="u-nav-item"><a href="http://127.0.0.1:8000/telefonos/" class="u-button-style u-nav-link">{% trans 'Móviles' %}</a></li>
+              <li class="u-nav-item"><a href="http://127.0.0.1:8000/ordenadores" class="u-button-style u-nav-link">{% trans 'Ordenadores' %}</a></li>
+              <li class="u-nav-item"><a href="http://127.0.0.1:8000/audios" class="u-button-style u-nav-link">{% trans 'Audio' %}</a></li>
             </ul>
 </div>
-</li><li class="u-nav-item"><a href="http://127.0.0.1:8000/registro" class="u-button-style u-nav-link">Inicio sesión</a>
+</li><li class="u-nav-item"><a href="http://127.0.0.1:8000/registro" class="u-button-style u-nav-link">{% trans 'Inicio sesión' %}</a>
 </li></ul>
           </div>
         </div>
@@ -92,7 +93,7 @@
                 <div class="u-block">
                   <div class="u-block-container u-clearfix"><!--block_header-->
                     <h5 class="u-block-header u-text"><!--block_header_content--><!--/block_header_content--></h5><!--/block_header--><!--block_content-->
-                    <div class="u-block-content u-text"><!--block_content_content-->Los derechos de esta página quedan reservados por IM componentes.<!--/block_content_content--></div><!--/block_content-->
+                    <div class="u-block-content u-text"><!--block_content_content-->{% trans 'Los derechos de esta página quedan reservados por IM componentes.' %}<!--/block_content_content--></div><!--/block_content-->
                   </div>
                 </div><!--/block-->
               </div><!--/position-->
