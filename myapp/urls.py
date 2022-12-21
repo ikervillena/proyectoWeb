@@ -13,5 +13,4 @@ urlpatterns = [
     path('ordenadores/<int:pk>', views.OrdenadorDetailView.as_view(), name='detalle_ordenador'),
     path('telefonos/<int:pk>', views.TelefonoDetailView.as_view(), name='detalle_telefono'),
     path('audios/<int:pk>', views.AudioDetailView.as_view(), name='detalle_audio'),
-    path('i18n/', views.set_language, name='set_language'),
 ]
