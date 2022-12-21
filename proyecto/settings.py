@@ -115,7 +115,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # 'en' para traducirlo a inglés.
 # 'eu' para traducirlo a euskera.
 
-LANGUAGE_CODE = 'es'
+LANGUAGE_CODE = 'en'
+
+LANGUAGES = [
+    ('en', 'English'),
+    ('es', 'Spanish'),
+    ('eu', 'Basque'),
+]
 
 TIME_ZONE = 'UTC'
 
